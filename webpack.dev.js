@@ -1,4 +1,6 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
 
@@ -31,13 +33,18 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/i,
+        test: /\.(css|scss)(\?.*)?$/i,
         use: [
           'style-loader',
-          'css-loader'
+          'css-loader',
+          'sass-loader',
           // Please note we are not running postcss here
         ]
       },
+      // {
+      //   test: /\.css$/,
+      //   loader: MiniCssExtractPlugin.loader
+      // },
       {
         // Load all images as base64 encoding if they are smaller than 8192 bytes
         test: /\.(png|jpe?g|gif|svg)$/i,
@@ -75,6 +82,9 @@ module.exports = {
       inject: true,
       chunks: ['contacts'],
       filename: 'contacts.html'
-    })
+    }),
+    // new MiniCssExtractPlugin({
+    //   filename: "[name].css",
+    // })
   ]
 }
