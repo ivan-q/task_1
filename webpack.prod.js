@@ -40,10 +40,11 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/i,
+        test: /\.(css|scss)(\?.*)?$/i,
         use: [
           MiniCssExtractPlugin.loader,
-          'css-loader'
+          'css-loader',
+          'sass-loader'
         ]
       },
       {
@@ -70,19 +71,22 @@ module.exports = {
       template: './src/page-index/tmpl.html',
       inject: 'body',
       chunks: ['index'],
-      filename: 'index.html'
+      filename: 'index.html',
+      minify: false
     }),
     new HtmlWebpackPlugin({
       template: './src/page-about/tmpl.html',
       inject: 'body',
       chunks: ['about'],
-      filename: 'about.html'
+      filename: 'about.html',
+      minify: false
     }),
     new HtmlWebpackPlugin({
       template: './src/page-contacts/tmpl.html',
       inject: 'body',
       chunks: ['contacts'],
-      filename: 'contacts.html'
+      filename: 'contacts.html',
+      minify: false
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',

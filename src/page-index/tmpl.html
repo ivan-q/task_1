@@ -3,19 +3,55 @@
 <head>
   <title>My homepage</title>
   <meta charset="UTF-8">
-  <meta http-equiv="cache-control" content="no-cache"/>
-  <meta http-equiv="pragma" content="no-cache"/>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <!-- <meta http-equiv="cache-control" content="no-cache"/> -->
+  <!-- <meta http-equiv="pragma" content="no-cache"/> -->
+  <!-- <meta http-equiv="content-type" content="text/html; charset=UTF-8"> -->
   <meta name="viewport"
         content="width=device-width,user-scalable=0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-  <!-- <link rel="stylesheet" href="index.aeb46ce33ee01ceabff9.css"> -->
+  <link rel="stylesheet" href="index.aeb46ce33ee01ceabff9.css">
 </head>
 <body>
-
   <%= require('html-loader!../partials/nav.html') %>
+<main class="main">
+  <header class="header buy-section">
+    <img class="header__bg" src="../src/img/Background/headphones.png" alt="headphones background">
+    <article class="product header__product">
+      <p class="product__description_short">Beats Studio3 Wireless</p>
+      <h1 class="product__name product__name_header">Experience your music&nbsp;like&nbsp;never&nbsp;before.</h1>
+      <div class="product__wrap_price-buy">
+        <p class="product__price product__price_header">$299.95</p>
+        <a href="#" class="product__button product__button_header">BUY NOW</a>
+      </div>
+      <p class="product__description_long">$60 Apple Music gift card with purchase of select Beats products.*</p>
+    </article>
+  </header>
+  <section class="buy-section slider-section">
+    <!-- <article class="product">
+      <p class="product__description_short"></p>
+      <h1 class="product__name"></h1>
+      <p class="product__price"></p>
+      <a href="#" class="product__button"></a>
+      <p class="product__description_long"></p>
+    </article> -->
+  </section>
+  <section class="buy-section">
+    <article class="product"></article>
+  </section>
+  <section class="buy-section">
+    <article class="product"></article>
+  </section>
+  <!-- <section class="signup">
+    <h1></h1>
+    <p></p>
+    <input type="text">
+    <button></button>
+  </section> -->
+</main>
 
-  
+
+
 
 
 
