@@ -5,6 +5,9 @@ require('../css/main.css')
 require('./page.css')
 require('../scss/main.scss')
 require('../scss/nav.scss')
+require('../scss/color_change.scss')
+require('../scss/slider.scss')
+require('../scss/endline_signs.scss')
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DOMContentLoaded', 'page-index')

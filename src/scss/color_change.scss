@@ -1,0 +1,39 @@
+.color-change__h2 {
+    font-size: 40px;
+    line-height: 55px;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.color-change__p {
+    margin-top: 11px;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.color-change__circles {
+    display: flex;
+    margin-top: 19px;
+    div {
+        border-radius: 50%;
+        width: 37px;
+        height: 37px;
+        border: 1px solid #eaeaea;
+        margin-right: 13px;
+    }
+    div:nth-child(1) {
+        background-color: #fff;
+    }
+    div:nth-child(2) {
+        background-color: #dd5656;
+    }
+    div:nth-child(3) {
+        background-color: black;
+    }
+    div:last-child {
+        margin-right: 0;
+    }
+    div:hover {
+        transform: scale(1.1);
+    }
+}
