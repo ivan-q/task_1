@@ -8,6 +8,7 @@ require('../scss/nav.scss')
 require('../scss/color_change.scss')
 require('../scss/slider.scss')
 require('../scss/endline_signs.scss')
+require('../scss/footer.scss')
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DOMContentLoaded', 'page-index')
