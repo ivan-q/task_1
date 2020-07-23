@@ -2,9 +2,9 @@ footer {
     padding-top: 63px;
 }
 
-.footer__content {
+.footer__content_wrap {
     background: #2b2835;
-    height: 589px;
+    padding-bottom: 21px;
 }
 
 .footer__content_copyright {
@@ -15,4 +15,26 @@ footer {
     color: #fff;
     mix-blend-mode: normal;
     opacity: 0.31;
+}
+
+.footer__content_columns {
+    display: grid;
+    grid-template-columns: 1fr repeat(4, 2fr);
+    grid-gap: 6.25%;
+    padding: 55px 6.25%;
+    li {
+        list-style: none;
+        padding-bottom: 1em;
+        a {
+            color: #fff;
+        }
+        li:nth-child(1) {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 31px;
+        }
+    }
+}
+.footer__content_logo {
+    text-align: center;
 }

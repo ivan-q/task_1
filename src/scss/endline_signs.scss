@@ -3,12 +3,6 @@
 //Add '+' in the end of a line
 .plus-sign {
     position: relative;
-}
-.plus-sign:after {
-    content: "+";
-    position: absolute;
-    // top: -30px;
-    // margin-left: -4px;
     top: -2rem;
     margin-left: -0.3rem;
     font-style: normal;
@@ -18,10 +12,10 @@
 }
 
 //Add 'x' in the end of a line
-.x-sign {
-    position: relative;
-}
-.x-sign:after {
-    content: "x";
-    position: absolute;
-}
+// .x-sign {
+//     position: relative;
+// }
+// .x-sign:after {
+//     content: "x";
+//     position: absolute;
+// }
