@@ -24,7 +24,7 @@ footer {
     padding: 55px 6.25%;
     li {
         list-style: none;
-        padding-bottom: 1em;
+        padding-bottom: 0.7em;
         a {
             color: #fff;
         }
@@ -37,4 +37,34 @@ footer {
 }
 .footer__content_logo {
     text-align: center;
+}
+
+.footer__content_follow {
+    display: grid;
+}
+
+.footer__content_socials {
+    padding-left: 0;
+    display: flex;
+    padding-top: 14px;
+    width: 170px;
+    li {
+        padding: 0;
+        padding-right: 14px;
+    }
+    li:last-child {
+        padding-right: 0;
+    }
+    i {
+        width: 32px;
+        height: 32px;
+        font-size: 20px;
+        font-weight: normal;
+        text-align: center;
+        line-height: 32px;
+        color: black;
+        background: #fff;
+        border-radius: 50px;
+        margin: auto;
+    }
 }

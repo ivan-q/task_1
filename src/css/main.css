@@ -4,15 +4,13 @@ body {
 }
 
 body {
-  /* background-color: #ffffff; */
-  /* color: #2c302f; */
   font-weight: 400;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  width: 1440px;
-  /* display: flex;*/
-  /* flex-direction: column; */
+  /* width: 1440px; */
+  /* display: flex;
+  flex-direction: column; */
 }
 
 a {

@@ -1,5 +1,6 @@
 import { Bar } from '../js/bar.es6'
 const { Foo } = require('../js/foo.cjs')
+// require('bootstrap/dist/css/bootstrap.css')
 require('normalize.css/normalize.css')
 require('../css/main.css')
 require('./page.css')
