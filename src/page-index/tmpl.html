@@ -197,19 +197,9 @@
       </article>
     </section>
 
-    <div class="signup-wrap">
-      <section class="signup">
-        <h1>Hear it first</h1>
-        <p>Get updates on product drops, collaborations and all things Beats.</p>
-        <form action="#" signup__form>
-          <input type="text" placeholder="Enter your email">
-          <a href="#">Sign up</a>
-        </form>
-      </section>
-    </div>
-
+    <%= require('html-loader!../partials/signup.html') %>
   </main>
-
+  
   <%= require('html-loader!../partials/footer.html') %>
 </body>
 

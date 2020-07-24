@@ -1,9 +1,11 @@
+@import 'variables';
+
 footer {
     padding-top: 63px;
 }
 
 .footer__content_wrap {
-    background: #2b2835;
+    background: $main_bg;
     padding-bottom: 21px;
 }
 
