@@ -1,34 +1,43 @@
+@import '_var_mix';
+
 nav {
     background-color: rgba(25, 23, 32, 0.47);
-}
-
-.nav__wrap {
     z-index: 10;
+    position: relative;
+    .container {
+        justify-content: space-between;
+    }
+}
+//Любой элемент с классом .header, идущий после nav, будет обладать следующими свойствами:
+nav + .header {
+    z-index: 1;
+    margin-top: -$header_height;
     position: relative;
 }
 
 .nav__list {
-    height: 78px;
-    justify-content: space-around;
-    margin: 0 3%;
+    height: $header_height;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .nav__logo {
-    padding-top: 5px;
-    padding-right: 16px;
+    a {
+        display: flex;
+    }
 }
 
-.nav__item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.nav__item a {
+.nav__item  {
+    a {
     font-weight: 500;
     font-size: 15px;
     line-height: 18px;
     color: white;
+    }
+    // a:hover {
+    //     text-decoration: underline #fff;
+    // }
 }
 
 .nav__icons {
@@ -37,20 +46,21 @@ nav {
     justify-content: space-between; 
     width: 180px;
     padding-left: 24px;
-}
-
-.nav__item_search img {
-    height: 29px;
-}
-
-@media all and (max-width: 1366px) {
-    .nav__icons {
-        width: 15%;
+    // margin-left: 9.5%;
+    img:first-child {
+        height: 29px;
     }
 }
 
-@media all and (min-width: 1366px) {
-    .nav__icons {
-        width: 13%;
-    }
-}
+
+// @media all and (max-width: 1366px) {
+//     .nav__icons {
+//         width: 15%;
+//     }
+// }
+
+// @media all and (min-width: 1366px) {
+//     .nav__icons {
+//         width: 13%;
+//     }
+// }

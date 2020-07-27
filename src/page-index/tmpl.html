@@ -16,190 +16,219 @@
 </head>
 
 <body>
-  <%= require('html-loader!../partials/nav.html') %>
   <main class="main">
+    <%= require('html-loader!../partials/nav.html') %>
 
-    <header class="header buy-section">
-      <img class="header__bg" src="../src/img/Background/headphones.png" alt="headphones background">
-      <article class="header__product">
-        <p class="product__description_short">Beats Studio3 Wireless</p>
-        <h1 class="product__name product__name_header">Experience your music&nbsp;like&nbsp;never&nbsp;before.</h1>
-        <div class="product__wrap_price-buy">
-          <p class="product__price product__price_header">$299.95</p>
-          <a href="#" class="product__button product__button_header">BUY NOW</a>
-        </div>
-        <p class="product__description_long">$60 Apple Music gift card with purchase of select Beats products.*</p>
-      </article>
-    </header>
-
-    <section class="buy-section slider-section">
-      <article class="product">
-        <p class="product__description_short">Portable Wireless Speaker</p>
-        <h1 class="product__name">Beats Pill<sup class="plus-sign">+</sup></h1>
-        <%= require('html-loader!../partials/color_change.html') %>
-        <div class="product__wrap_price-buy">
-          <p class="product__price">$299.95</p>
-          <a href="#" class="product__button">BUY NOW</a>
-        </div>
-        <p class="product__description_long">$60 Apple Music gift card with purchase of select Beats products.*</p>
-      </article>
-      <article class="buy-section__slider">
-        <img src="../src/img/Bitmap-1.png" alt="slider">
-        <div class="buy-section__pagination">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      </article>
-    </section>
-
-    <div class="bg-wrap">
-      <section class="buy-section bg-section">
-        <img class="buy-secion__img" src="../src/img/Bitmap-3.png" alt="headphones photo">
-        <article class="product">
-          <p class="product__description_short">Totally wireless high-performance earphones</p>
-          <h1 class="product__name">Powerbeats Pro</h1>
-          <p class="product__description_short">Up to 9 hours of listening time</p>
-          <p class="product__description_short">Apple H1 Chip & Class 1 Wireless Bluetooth®</p>
-          <p class="product__description_short">Sweat & water resistant</p>
-          <p class="product__description_short">Adjustable, secure-fit earhooks</p>
+    <section class="header buy-section">
+      <div class="container container__header">
+        <img class="header__bg" src="../src/img/Background/headphones.png" alt="headphones background">
+        <article class="header__product">
+          <p class="product__description_short">Beats Studio3 Wireless</p>
+          <h1 class="product__name product__name_header">Experience your music&nbsp;like&nbsp;never&nbsp;before.</h1>
           <div class="product__wrap_price-buy">
-            <p class="product__price">$199.95</p>
-            <a href="#" class="product__button product__button_bg">BUY NOW</a>
+            <p class="product__price product__price_header">$299.95</p>
+            <a href="#" class="product__button product__button_header">BUY NOW</a>
           </div>
           <p class="product__description_long">$60 Apple Music gift card with purchase of select Beats products.*</p>
         </article>
-      </section>
+      </div>
+    </section>
+
+    <section class="buy-section slider-section">
+      <div class="container">
+        <article class="product">
+          <p class="product__description_short">Portable Wireless Speaker</p>
+          <h2 class="product__name">Beats Pill<sup class="plus-sign">+</sup></h2>
+          <%= require('html-loader!../partials/color_change.html') %>
+          <div class="product__wrap_price-buy">
+            <p class="product__price">$299.95</p>
+            <a href="#" class="product__button">BUY NOW</a>
+          </div>
+          <p class="product__description_long">$60 Apple Music gift card with purchase of select Beats products.*</p>
+        </article>
+        <article class="buy-section__slider">
+          <img src="../src/img/Bitmap-1.png" alt="slider">
+          <div class="buy-section__pagination">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="bg-wrap">
+      <div class="bg-wrap-img">
+        <div class="container">
+          <section class="buy-section bg-section">
+            <img src="../src/img/Bitmap-3.png" alt="headphones photo">
+            <article class="product">
+              <p class="product__description_short">Totally wireless high-performance earphones</p>
+              <h2 class="product__name">Powerbeats Pro</h2>
+              <p class="product__description_short">Up to 9 hours of listening time</p>
+              <p class="product__description_short">Apple H1 Chip & Class 1 Wireless Bluetooth®</p>
+              <p class="product__description_short">Sweat & water resistant</p>
+              <p class="product__description_short">Adjustable, secure-fit earhooks</p>
+              <div class="product__wrap_price-buy">
+                <p class="product__price">$199.95</p>
+                <a href="#" class="product__button product__button_bg">BUY NOW</a>
+              </div>
+              <p class="product__description_long">$60 Apple Music gift card with purchase of select Beats products.*
+              </p>
+            </article>
+          </section>
+        </div>
+      </div>
     </div>
 
     <div class="bg-grey_wrap">
-      <section class="buy-section buy-section_bg-grey">
-        <article class="product">
-          <p class="product__description_short">Talk. Listen. Beats.</p>
-          <h1 class="product__name">Beatsˣ</h1>
-          <p class="product__description_short">Up to 8 hours of battery life</p>
-          <p class="product__description_short">With Fast Fuel, a 5-minute charge = 2 hours of playback</p>
-          <p class="product__description_short">Sweat & water resistant</p>
-          <p class="product__description_short">Apple W1 Chip & Class 1 Wireless Bluetooth®</p>
-          <div class="product__wrap_price-buy">
-            <p class="product__price">$199.95</p>
-            <a href="#" class="product__button">BUY NOW</a>
-          </div>
-        </article>
-        <img class="buy-secion__img" src="../src/img/Bitmap-2.png" alt="headphones photo">
-      </section>
+      <div class="container">
+        <section class="buy-section buy-section_bg-grey">
+          <article class="product">
+            <p class="product__description_short">Talk. Listen. Beats.</p>
+            <h2 class="product__name">Beatsˣ</h2>
+            <p class="product__description_short">Up to 8 hours of battery life</p>
+            <p class="product__description_short">With Fast Fuel, a 5-minute charge = 2 hours of playback</p>
+            <p class="product__description_short">Sweat & water resistant</p>
+            <p class="product__description_short">Apple W1 Chip & Class 1 Wireless Bluetooth®</p>
+            <div class="product__wrap_price-buy">
+              <p class="product__price">$199.95</p>
+              <a href="#" class="product__button">BUY NOW</a>
+            </div>
+          </article>
+          <img class="buy-secion__img" src="../src/img/Bitmap-2.png" alt="headphones photo">
+        </section>
+      </div>
     </div>
 
     <section class="product-list">
-      <article class="product-list__item">
-        <img src="../src/img/mainpage_list_items/Bitmap.png" alt="">
-        <div class="product__wrap">
-          <h1 class="product__name">Beatsˣ</h1>
-          <p class="product__description_short">Up to 8 hours of battery life</br>
-            With&nbsp;Fast&nbsp;Fuel, a 5-minute charge =</br> 
-            2 hours of playback</p>
-          <div class="product__wrap_price-buy">
-            <p class="product__price">$199.95</p>
-            <a href="#" class="product__button">BUY NOW</a>
+      <div class="container">
+        <article class="product-list__item">
+          <div class="product-list__img">
+            <img src="../src/img/mainpage_list_items/Bitmap.png" alt="">
           </div>
-        </div>
-      </article>
-      <article class="product-list__item">
-        <img src="../src/img/mainpage_list_items/Bitmap-1.png" alt="">
-        <div class="product__wrap">
-          <h1 class="product__name">Beatsˣ</h1>
-          <p class="product__description_short">Up to 8 hours of battery life</br>
-            With&nbsp;Fast&nbsp;Fuel, a 5-minute charge =</br> 
-            2 hours of playback</p>
-          <div class="product__wrap_price-buy">
-            <p class="product__price">$199.95</p>
-            <a href="#" class="product__button">BUY NOW</a>
+          <div class="product__wrap">
+            <h2 class="product__name">Beatsˣ</h2>
+            <p class="product__description_short">Up to 8 hours of battery life</br>
+              With&nbsp;Fast&nbsp;Fuel, a 5-minute charge =</br>
+              2 hours of playback</p>
+            <div class="product__wrap_price-buy">
+              <p class="product__price">$199.95</p>
+              <a href="#" class="product__button">BUY NOW</a>
+            </div>
           </div>
-        </div>
-      </article>
-      <article class="product-list__item">
-        <img src="../src/img/mainpage_list_items/Bitmap-2.png" alt="">
-        <div class="product__wrap">
-          <h1 class="product__name">Beatsˣ</h1>
-          <p class="product__description_short">Up to 8 hours of battery life</br>
-            With&nbsp;Fast&nbsp;Fuel, a 5-minute charge =</br> 
-            2 hours of playback</p>
-          <div class="product__wrap_price-buy">
-            <p class="product__price">$199.95</p>
-            <a href="#" class="product__button">BUY NOW</a>
+        </article>
+        <article class="product-list__item">
+          <div class="product-list__img">
+            <img src="../src/img/mainpage_list_items/Bitmap-1.png" alt="">
           </div>
-        </div>
-      </article>
-      <article class="product-list__item">
-        <img src="../src/img/mainpage_list_items/Bitmap-3.png" alt="">
-        <div class="product__wrap">
-          <h1 class="product__name">Beatsˣ</h1>
-          <p class="product__description_short">Up to 8 hours of battery life</br>
-            With&nbsp;Fast&nbsp;Fuel, a 5-minute charge =</br> 
-            2 hours of playback</p>
-          <div class="product__wrap_price-buy">
-            <p class="product__price">$199.95</p>
-            <a href="#" class="product__button">BUY NOW</a>
+          <div class="product__wrap">
+            <h2 class="product__name">Beatsˣ</h2>
+            <p class="product__description_short">Up to 8 hours of battery life</br>
+              With&nbsp;Fast&nbsp;Fuel, a 5-minute charge =</br>
+              2 hours of playback</p>
+            <div class="product__wrap_price-buy">
+              <p class="product__price">$199.95</p>
+              <a href="#" class="product__button">BUY NOW</a>
+            </div>
           </div>
-        </div>
-      </article>
-      <article class="product-list__item">
-        <img src="../src/img/mainpage_list_items/Bitmap-4.png" alt="">
-        <div class="product__wrap">
-          <h1 class="product__name">Beatsˣ</h1>
-          <p class="product__description_short">Up to 8 hours of battery life</br>
-            With&nbsp;Fast&nbsp;Fuel, a 5-minute charge =</br> 
-            2 hours of playback</p>
-          <div class="product__wrap_price-buy">
-            <p class="product__price">$199.95</p>
-            <a href="#" class="product__button">BUY NOW</a>
+        </article>
+        <article class="product-list__item">
+          <div class="product-list__img">
+            <img src="../src/img/mainpage_list_items/Bitmap-2.png" alt="">
           </div>
-        </div>
-      </article>
-      <article class="product-list__item">
-        <img src="../src/img/mainpage_list_items/Bitmap-5.png" alt="">
-        <div class="product__wrap">
-          <h1 class="product__name">Beatsˣ</h1>
-          <p class="product__description_short">Up to 8 hours of battery life</br>
-            With&nbsp;Fast&nbsp;Fuel, a 5-minute charge =</br> 
-            2 hours of playback</p>
-          <div class="product__wrap_price-buy">
-            <p class="product__price">$199.95</p>
-            <a href="#" class="product__button">BUY NOW</a>
+          <div class="product__wrap">
+            <h2 class="product__name">Beatsˣ</h2>
+            <p class="product__description_short">Up to 8 hours of battery life</br>
+              With&nbsp;Fast&nbsp;Fuel, a 5-minute charge =</br>
+              2 hours of playback</p>
+            <div class="product__wrap_price-buy">
+              <p class="product__price">$199.95</p>
+              <a href="#" class="product__button">BUY NOW</a>
+            </div>
           </div>
-        </div>
-      </article>
-      <article class="product-list__item">
-        <img src="../src/img/mainpage_list_items/Bitmap-6.png" alt="">
-        <div class="product__wrap">
-          <h1 class="product__name">Beatsˣ</h1>
-          <p class="product__description_short">Up to 8 hours of battery life</br>
-            With&nbsp;Fast&nbsp;Fuel, a 5-minute charge =</br> 
-            2 hours of playback</p>
-          <div class="product__wrap_price-buy">
-            <p class="product__price">$199.95</p>
-            <a href="#" class="product__button">BUY NOW</a>
+        </article>
+        <article class="product-list__item">
+          <div class="product-list__img">
+            <img src="../src/img/mainpage_list_items/Bitmap-3.png" alt="">
           </div>
-        </div>
-      </article>
-      <article class="product-list__item">
-        <img src="../src/img/mainpage_list_items/Bitmap-7.png" alt="">
-        <div class="product__wrap">
-          <h1 class="product__name">Beatsˣ</h1>
-          <p class="product__description_short">Up to 8 hours of battery life</br>
-            With&nbsp;Fast&nbsp;Fuel, a 5-minute charge =</br> 
-            2 hours of playback</p>
-          <div class="product__wrap_price-buy">
-            <p class="product__price">$199.95</p>
-            <a href="#" class="product__button">BUY NOW</a>
+          <div class="product__wrap">
+            <h2 class="product__name">Beatsˣ</h2>
+            <p class="product__description_short">Up to 8 hours of battery life</br>
+              With&nbsp;Fast&nbsp;Fuel, a 5-minute charge =</br>
+              2 hours of playback</p>
+            <div class="product__wrap_price-buy">
+              <p class="product__price">$199.95</p>
+              <a href="#" class="product__button">BUY NOW</a>
+            </div>
           </div>
-        </div>
-      </article>
+        </article>
+        <article class="product-list__item">
+          <div class="product-list__img">
+            <img src="../src/img/mainpage_list_items/Bitmap-4.png" alt="">
+          </div>
+          <div class="product__wrap">
+            <h2 class="product__name">Beatsˣ</h2>
+            <p class="product__description_short">Up to 8 hours of battery life</br>
+              With&nbsp;Fast&nbsp;Fuel, a 5-minute charge =</br>
+              2 hours of playback</p>
+            <div class="product__wrap_price-buy">
+              <p class="product__price">$199.95</p>
+              <a href="#" class="product__button">BUY NOW</a>
+            </div>
+          </div>
+        </article>
+        <article class="product-list__item">
+          <div class="product-list__img">
+            <img src="../src/img/mainpage_list_items/Bitmap-5.png" alt="">
+          </div>
+          <div class="product__wrap">
+            <h2 class="product__name">Beatsˣ</h2>
+            <p class="product__description_short">Up to 8 hours of battery life</br>
+              With&nbsp;Fast&nbsp;Fuel, a 5-minute charge =</br>
+              2 hours of playback</p>
+            <div class="product__wrap_price-buy">
+              <p class="product__price">$199.95</p>
+              <a href="#" class="product__button">BUY NOW</a>
+            </div>
+          </div>
+        </article>
+        <article class="product-list__item">
+          <div class="product-list__img">
+            <img src="../src/img/mainpage_list_items/Bitmap-6.png" alt="">
+          </div>
+          <div class="product__wrap">
+            <h2 class="product__name">Beatsˣ</h2>
+            <p class="product__description_short">Up to 8 hours of battery life</br>
+              With&nbsp;Fast&nbsp;Fuel, a 5-minute charge =</br>
+              2 hours of playback</p>
+            <div class="product__wrap_price-buy">
+              <p class="product__price">$199.95</p>
+              <a href="#" class="product__button">BUY NOW</a>
+            </div>
+          </div>
+        </article>
+        <article class="product-list__item">
+          <div class="product-list__img">
+            <img src="../src/img/mainpage_list_items/Bitmap-7.png" alt="">
+          </div>
+          <div class="product__wrap">
+            <h2 class="product__name">Beatsˣ</h2>
+            <p class="product__description_short">Up to 8 hours of battery life</br>
+              With&nbsp;Fast&nbsp;Fuel, a 5-minute charge =</br>
+              2 hours of playback</p>
+            <div class="product__wrap_price-buy">
+              <p class="product__price">$199.95</p>
+              <a href="#" class="product__button">BUY NOW</a>
+            </div>
+          </div>
+        </article>
     </section>
+    </div>
 
     <%= require('html-loader!../partials/signup.html') %>
   </main>
-  
+
   <%= require('html-loader!../partials/footer.html') %>
 </body>
 
