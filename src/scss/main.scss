@@ -1,21 +1,6 @@
 @import "_var_mix";
 
-// @font-face {
-//     font-family: 'Montserrat-Regular';
-//     src: url(../fonts/Montserrat-Regular.ttf);
-//   }
-//   @font-face {
-//     font-family: 'Montserrat-Medium';
-//     src: url(../fonts/Montserrat-Medium.ttf);
-//   }
-//   @font-face {
-//     font-family: 'Montserrat-SemiBold';
-//     src: url(../fonts/Montserrat-SemiBold.ttf);
-//   }
-//   @font-face {
-//     font-family: 'Montserrat-Bold';
-//     src: url(../fonts/Montserrat-Bold.ttf);
-//   }
+
 
 * {
     margin: 0;
@@ -64,7 +49,7 @@ main > * {
     position: absolute; //***************
     left: -1%;
     z-index: 1;
-    width: 59.4vw;
+    width: 59.4%;
 }
 
 .header__product {
@@ -172,7 +157,7 @@ main > * {
     }
     img {
         margin-left: -60px;
-        width: 48.68vw;
+        width: 48.6%;
     }
 }
 
@@ -190,6 +175,12 @@ main > * {
     padding: 12px 48px;
 }
 
+
+
+
+
+
+
 .bg-grey_wrap {
     margin-top: 171px;
     background: #f4f4f4;
@@ -202,12 +193,22 @@ main > * {
     display: flex;
     justify-content: space-between;
     
-    img {
+    .product__img {
         padding-top: 38px;
         margin-right: -6%;
-        width: 51.32vw;
+        img {
+         width: 51.32vw;
+        }    
     }
 }
+
+
+
+
+
+
+
+
 
 .product-list {
     display: flex;
