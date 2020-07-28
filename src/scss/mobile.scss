@@ -1,0 +1,39 @@
+// @media all and (max-width: 768px) {
+
+// }
+
+// (min-width: 320px)
+
+@media all and (max-width: 768px) {
+    .container {
+        width: 100vw;
+    }
+    .header__bg {
+        display: none;
+    }
+    // nav + .header {
+    //     margin-top: -40px;
+    // }
+    .nav__list {
+        flex-direction: column;
+        justify-content: flex-start;
+        // height: 40px;
+        // align-items: center;
+        ul {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .nav__icons {
+            width: initial;
+            padding: 0;
+            gap: 20px;
+            a:first-child {
+                display: none;
+            }
+        }
+    }
+}
+
+@media all and (width: 375px) {
+}

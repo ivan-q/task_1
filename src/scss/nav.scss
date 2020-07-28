@@ -12,12 +12,12 @@ nav {
 //Любой элемент с классом .header, идущий после nav, будет обладать следующими свойствами:
 nav + .header {
     z-index: 1;
-    margin-top: -$header_height;
+    margin-top: -$nav_height;
     position: relative;
 }
 
 .nav__list {
-    height: $header_height;
+    height: $nav_height;
     display: flex;
     justify-content: space-evenly;
     align-items: center;

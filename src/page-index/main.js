@@ -13,6 +13,7 @@ require('../scss/slider.scss')
 require('../scss/endline_signs.scss')
 require('../scss/footer.scss')
 require('../scss/media.scss')
+require('../scss/mobile.scss')
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DOMContentLoaded', 'page-index')
