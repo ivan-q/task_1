@@ -1,10 +1,12 @@
 @import "_var_mix";
 
-
-
 * {
     margin: 0;
     padding: 0;
+}
+
+html {
+    overflow-x: hidden;
 }
 
 body {
@@ -24,22 +26,19 @@ main > * {
     margin: 0 auto;
 }
 
-.container__header {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    // align-items: center;
-}
+
 
 .header {
     min-height: 616px;
     background-color: $main_bg;
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        // background-image: url(../img/Background/headphones.png);
+        // background-repeat: no-repeat;
+    }
 }
-
-// .product:nth-child(2n-1) {
-//     float: left;
-//     padding-left: 92px;
-// }
 
 .product {
     margin-top: 239px;
@@ -60,6 +59,9 @@ main > * {
     color: #fff;
     max-width: 510px;
     margin-right: 4%;
+    .product__description_long {
+        color: $description;
+    }
 }
 
 .product__description_short {
@@ -98,28 +100,9 @@ main > * {
     margin-right: 34px;
 }
 
-.product__wrap_price-buy .product__button_header {
-    color: black;
-    background: #00b0ff;
-    padding: 12px 48px;
-}
-
-.header__product .product__description_long {
-    color: #00b0ff;
-}
-
 .product__description_long {
     font-weight: 500;
     font-size: 13px;
-}
-
-.product__button {
-    color: #fff;
-    background-color: black;
-    font-weight: 600;
-    border-radius: 100px;
-    padding: 12px 15px;
-    display: inline-block;
 }
 
 .slider-section {
@@ -127,22 +110,22 @@ main > * {
     .container {
         display: flex;
         justify-content: space-between;
-            .buy-section__slider {
-                margin-right: -4%;
-                img {
-                    width: 52vw;
-                }
+        .buy-section__slider {
+            margin-right: -4%;
+            img {
+                max-width: 755px;
             }
+        }
     }
 }
 
 .bg-section {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     color: #fff;
+    height: 842px;
 
-    // min-height: 844px;
     .product__name {
         text-transform: uppercase;
         font-weight: bold;
@@ -162,8 +145,9 @@ main > * {
 }
 
 .bg-wrap {
-    background: linear-gradient(132.34deg, #e040fb 14.55%, #0a00b6 84.03%);
+    background: $gradient;
     max-width: 1440px;
+    margin: 0 auto;
 }
 
 .bg-wrap-img {
@@ -171,54 +155,37 @@ main > * {
     background-repeat: no-repeat;
 }
 
-.product__button_bg {
-    padding: 12px 48px;
-}
-
-
-
-
-
-
-
 .bg-grey_wrap {
     margin-top: 171px;
     background: #f4f4f4;
     .product {
-        margin-top: 205px;
+        margin-top: 0;
     }
 }
 
-.buy-section_bg-grey {
+.bg-grey {
     display: flex;
     justify-content: space-between;
-    
+    align-items: center;
+
     .product__img {
         padding-top: 38px;
-        margin-right: -6%;
+        padding-bottom: 67px;
+        margin-right: -10%;
         img {
-         width: 51.32vw;
-        }    
+            width: 51.32vw;
+        }
     }
 }
 
-
-
-
-
-
-
-
-
 .product-list {
-    display: flex;
-    justify-content: center;
     .container {
+        max-width: 1248px;
         display: grid;
         padding-top: 171px;
-        grid-template: repeat(2, 543px) / repeat(4, 1fr);
+        grid-template-rows: repeat(auto, 543px);
+        grid-template-columns: repeat(auto-fill, minmax(296px, 1fr));
         grid-gap: 40px 20px;
-        grid-auto-rows: minmax(543px, auto);
     }
 }
 
@@ -228,6 +195,7 @@ main > * {
     justify-items: center;
     align-items: end;
     background: $product_bg;
+    // max-width: 296px;
     .product-list__img {
         display: flex;
         flex-direction: column;
@@ -245,9 +213,7 @@ main > * {
         line-height: 55px;
         color: #2b2835;
     }
-    .product__button {
-        padding: 12px 33px;
-    }
+  
     .product__price {
         margin: 0;
         font-weight: 600;
@@ -271,5 +237,4 @@ main > * {
 
 .product__wrap {
     padding: 0 20px 36px 20px;
-    
 }

@@ -1,19 +1,46 @@
 //Variables
-$main_bg: #2B2835; //Цвет фона .header и footer
-$signup_bg: #F8F8F9;
-$product_bg: #F8F8F9;
-$product_price: #9D8220;
+$main_bg: #2b2835; //Цвет фона .header и footer
+$signup_bg: #f8f8f9;
+$product_bg: #f8f8f9;
+$product_price: #9d8220;
 $product_price_big: #ffff00;
+$gradient: linear-gradient(132.34deg, #e040fb 14.55%, #0a00b6 84.03%); //Градиент в блоке с абстрактным
+// фоновым рисунком
+$description: #00b0ff; //Последняя строка текста в первом блоке главной страницы
 
 $header_height: 78px; //Меняем высоту навбара здесь
 
-
-
 //высота пэддингов
-//кнопки
-
-
-
-
 
 //Mixins
+
+//Делая @include в родительском блоке с кнопкой, в круглых скобках
+//указываем три параметра через запятую: цвет текста, цает фона, ширина
+@mixin button($text_color, $bg_color, $width) {
+    .product__button {
+        height: 41px;
+        border-radius: 100px;
+        line-height: 41px;
+        text-align: center;
+        font-weight: 600;
+        color: $text_color;
+        background: $bg_color;
+        width: $width;
+    }
+}
+//Здесь меняем цвет и ширину кнопок на сайте
+.header {
+    @include button(black, #00b0ff, 170px);
+}
+.slider-section {
+    @include button(white, black, 110px);
+}
+.bg-section {
+    @include button(white, black, 170px);
+}
+.bg-grey {
+    @include button(white, black, 110px);
+}
+.product-list {
+    @include button(white, black, 145px);
+}

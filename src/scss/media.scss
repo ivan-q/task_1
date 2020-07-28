@@ -4,3 +4,9 @@
         margin: 0 96px;
     }
 }
+
+@media all and (min-width: 1440px) {
+    .header__bg {
+        width: initial;
+    }
+}
