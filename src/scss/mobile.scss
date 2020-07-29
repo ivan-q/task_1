@@ -1,3 +1,7 @@
+//Какая-то проблема с onclick. Присвоение класса идёт только после второго щелчка. Надо пофиксить
+//Так же посмотреть, что скрывает 'overflow-x: hidden;'
+//Отрегулировать ширину и высоту выпадающего меню для планшетов
+
 @import "_var_mix";
 //Мобильные телефоны
 @media all and (max-width: 768px - 1px) {
@@ -6,10 +10,29 @@
         width: initial;
         margin: 0 20px;
     }
+    .header {
+        // min-height: 700px;
+        // max-height: 58vw;
+        // z-index: initial;
+        background-color: transparent;
+    }
+    .header::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 58vw;
+        background-color: $main_bg;
+    }
     .header__bg {
-        // display: none;
-        margin: 0 auto;
+        margin-left: 5.5%;
         position: relative;
+        width: 100%;
+    }
+    .header__product {
+        color: black;
+        padding-top: 18px;
     }
     nav + .header {
         margin-top: -$nav_height_m;
@@ -33,8 +56,11 @@
             align-items: flex-start;
             position: absolute;
             background-color: rgb(19, 104, 173);
-            width: max-content;
+            min-width: 411px;
+            height: 100vh;
+            font-size: 60px;
             padding: 20px;
+            padding-top: 5px;
             top: 40px;
             left: 0;
             display: none;
@@ -63,7 +89,56 @@
                 }
             }
         }
-        
+    }
+    .product__description_short {
+        font-weight: 500;
+        font-size: 16px;
+    }
+    .product__name,
+    .product__name_header {
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 35px;
+    }
+    .product__price,
+    .product__price_header {
+        font-size: 32px;
+        margin-right: 14px;
+    }
+    .product__description_long {
+        font-size: 13px;
+    }
+    .header__product .product__description_long {
+        font-size: 13px;
+        color: black;
+    }
+    .product__wrap_price-buy {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+    .slider-section {
+        .container {
+            flex-direction: column-reverse;
+            justify-content: flex-start;
+            width: initial;
+            align-items: center;
+            .buy-section__slider {
+                width: initial;
+                margin-right: 0;
+                padding: 40px 0;
+                img {
+                    width: 100%;
+                    margin-right: 0;
+                }
+                .buy-section__pagination {
+                    margin-top: -20px;
+                }
+            }
+        }
+    }
+    .product {
+        margin-top: 0;
     }
 }
 
