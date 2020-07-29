@@ -3,6 +3,7 @@
 //Отрегулировать ширину и высоту выпадающего меню для планшетов
 
 @import "_var_mix";
+
 //Мобильные телефоны
 @media all and (max-width: 768px - 1px) {
     .container {
@@ -11,7 +12,7 @@
         margin: 0 20px;
     }
     .header {
-        // min-height: 700px;
+        min-height: unset;
         // max-height: 58vw;
         // z-index: initial;
         background-color: transparent;
@@ -33,6 +34,7 @@
     .header__product {
         color: black;
         padding-top: 18px;
+        @include button(black, #00B0FF, 146px);
     }
     nav + .header {
         margin-top: -$nav_height_m;
@@ -93,12 +95,30 @@
     .product__description_short {
         font-weight: 500;
         font-size: 16px;
+        margin-bottom: 0;
     }
-    .product__name,
     .product__name_header {
         font-weight: bold;
         font-size: 32px;
         line-height: 35px;
+        margin-bottom: 0;
+    }
+    .product {
+        .product__name {
+            font-weight: bold;
+            font-size: 32px;
+            line-height: 55px;
+            margin-top: 3px;
+            margin-bottom: 0;
+        }
+        .plus-sign {
+            top: -0.55rem;
+            margin-left: 0;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 40px;
+            line-height: 55px;
+        }
     }
     .product__price,
     .product__price_header {
@@ -107,6 +127,7 @@
     }
     .product__description_long {
         font-size: 13px;
+        opacity: 0.68;
     }
     .header__product .product__description_long {
         font-size: 13px;
@@ -118,6 +139,7 @@
         margin-top: 20px;
     }
     .slider-section {
+        padding-bottom: 100px;
         .container {
             flex-direction: column-reverse;
             justify-content: flex-start;
@@ -126,21 +148,102 @@
             .buy-section__slider {
                 width: initial;
                 margin-right: 0;
-                padding: 40px 0;
+                padding: 20px 0;
                 img {
                     width: 100%;
                     margin-right: 0;
                 }
                 .buy-section__pagination {
-                    margin-top: -20px;
+                    display: none;
                 }
             }
+            @include button(#F8F8F9, #030303, 146px);
         }
     }
     .product {
-        margin-top: 0;
+        margin-top: -40px;
+    }
+    .color-change__h2 {
+        font-size: 32px;
+    }
+    .bg-section {
+        flex-direction: column;
+        height: unset;
+        color: #F8F8F9;
+        padding-bottom: 35px;
+        .product {
+            padding-left: 0;
+            .product__description_short:first-child {
+                margin: 0;
+            }
+            .product__description_short {
+                font-style: normal;
+                font-weight: normal;
+                // line-height: 20px;
+                font-size: 14px;
+                margin: 14px 0;
+            }
+            .product__price {
+                line-height: 39px;
+            }
+            .product__description_long {
+                opacity: unset;
+                line-height: 18px;
+            }
+            .product__name {
+                margin-top: -4px;
+                margin-bottom: 3px;
+            }
+        }
+        img {
+            margin-left: unset;
+            margin-top: 6px;
+            width: 100%;
+        }
+
+    }
+    .bg-grey_wrap {
+        margin-top: 40px;
+        background: none;
+        .container {
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .bg-grey {
+        flex-direction: column-reverse;
+        .product__img {
+            margin-right: 0;
+            padding: 40px 0;
+            img {
+                width: 107.7vw;
+            }
+        }
+    }
+    
+}
+
+
+
+
+
+
+//Вспомогательные медиазапросы для некоторых элементов
+@media all and (max-width: 375px) {
+    .bg-wrap-img {
+        background-image: url(../img/Background/Group-18-m.png);
     }
 }
+@media all and (max-width: 360px) {
+    .bg-section {
+        .product__name {
+            line-height: initial;
+        }
+    }
+}
+
+
+
 
 @media all and (width: 375px) {
 }
