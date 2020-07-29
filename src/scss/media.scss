@@ -1,5 +1,5 @@
 //Медиазапросы для больших и средних экранов. Стили для мобильных телефонов лежат в файле 'mobile.css'
-@media all and (min-width: 769px) and (max-width: 1440px) {
+@media all and (min-width: 768px) and (max-width: 1440px) {
     .container {
         width: initial;
         margin: 0 96px;

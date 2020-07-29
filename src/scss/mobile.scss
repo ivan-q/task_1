@@ -1,39 +1,78 @@
-// @media all and (max-width: 768px) {
-
-// }
-
-// (min-width: 320px)
-
-@media all and (max-width: 768px) {
+@import "_var_mix";
+//Мобильные телефоны
+@media all and (max-width: 768px - 1px) {
     .container {
-        width: 100vw;
+        // width: 100vw - 2.6vw;
+        width: initial;
+        margin: 0 20px;
     }
     .header__bg {
-        display: none;
+        // display: none;
+        margin: 0 auto;
+        position: relative;
     }
-    // nav + .header {
-    //     margin-top: -40px;
-    // }
+    nav + .header {
+        margin-top: -$nav_height_m;
+    }
     .nav__list {
-        flex-direction: column;
-        justify-content: flex-start;
-        // height: 40px;
-        // align-items: center;
+        justify-content: center;
+        height: $nav_height_m;
+        .nav__burger {
+            display: initial;
+        }
+        .nav__logo {
+            position: absolute;
+            left: 56px;
+            img {
+                width: 26.93px;
+            }
+        }
         ul {
             flex-direction: column;
             justify-content: flex-start;
-            align-items: center;
+            align-items: flex-start;
+            position: absolute;
+            background-color: rgb(19, 104, 173);
+            width: max-content;
+            padding: 20px;
+            top: 40px;
+            left: 0;
+            display: none;
+            li {
+                margin-bottom: 10px;
+            }
+            li:last-child {
+                margin-bottom: 0;
+            }
+        }
+        .open {
+            display: initial;
         }
         .nav__icons {
             width: initial;
             padding: 0;
             gap: 20px;
-            a:first-child {
+            a {
                 display: none;
             }
+            .nav__item_m {
+                display: initial;
+                img {
+                    width: 22px;
+                    height: 22px;
+                }
+            }
         }
+        
     }
 }
 
 @media all and (width: 375px) {
+}
+
+@media all and (width: 1440px) {
+}
+
+//Планшеты
+@media all and (max-width: 1200px - 1px) {
 }

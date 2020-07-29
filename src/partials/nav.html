@@ -1,18 +1,32 @@
+<script>
+  function toggleMenu() {
+    document.getElementById('nav__burger').onclick = function() {
+      document.getElementById('nav__menu').classList.toggle('open');
+    }
+}
+</script>
 <nav>
   <div class="nav__list container">
+    <div class="nav__burger" onclick="toggleMenu()" id="nav__burger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
     <div class="nav__item nav__logo">
       <a href="../../dist/index.html"><img src="../img/icons/logo.png" alt=""></a>
     </div>
-    <ul>
-      <li class="nav__item"><a href="#">HEADPHONES</a></li>
-      <li class="nav__item"><a href="#">EARPHONES</a></li>
-      <li class="nav__item"><a href="#">SPEAKERS</a></li>
-      <li class="nav__item"><a href="#">EXPLORE</a></li>
+    <ul class="nav__item" id="nav__menu">
+      <li><a href="#">HEADPHONES</a></li>
+      <li><a href="#">EARPHONES</a></li>
+      <li><a href="#">SPEAKERS</a></li>
+      <li><a href="#">EXPLORE</a></li>
     </ul>
     <div class="nav__item nav__icons">
       <a href="#"><img src="../img/icons/search.png" alt="search"></i></a>
       <a href="#"><img src="../img/icons/profile.png" alt="profile"></a>
       <a href="#"><img src="../img/icons/cart.png" alt="cart"></a>
+      <a href="#" class="nav__item_m"><img src="../img/icons/profile-m.png" alt="cart"></a>
+      <a href="#" class="nav__item_m"><img src="../img/icons/cart-m.png" alt="cart"></a>
     </div>
   </div>
 </nav>

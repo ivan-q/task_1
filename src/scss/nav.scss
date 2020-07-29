@@ -61,14 +61,19 @@ nav + .header {
     }
 }
 
-// @media all and (max-width: 1366px) {
-//     .nav__icons {
-//         width: 15%;
-//     }
-// }
+.nav__burger,
+.nav__item_m {
+    display: none;
+}
 
-// @media all and (min-width: 1366px) {
-//     .nav__icons {
-//         width: 13%;
-//     }
-// }
+.nav__burger {
+    cursor: pointer;
+    div {
+        background-color: #fff;
+        width: 16px;
+        height: 2px;
+    }
+    div:not(:last-child) {
+        margin-bottom: 3px;
+    }
+}

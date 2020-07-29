@@ -24,3 +24,5 @@ window.Bar = Bar()
 
 console.log(window.Foo.getValue())
 console.log(window.Bar)
+
+
