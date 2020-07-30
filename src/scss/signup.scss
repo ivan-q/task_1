@@ -45,6 +45,9 @@
         border: 1px solid #bfbfbf;
         outline: none;
     }
+    input::placeholder {
+        color: #030303;
+    }
     a {
         text-align: center;
         text-transform: uppercase;

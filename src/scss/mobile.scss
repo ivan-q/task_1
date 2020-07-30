@@ -1,6 +1,7 @@
 //Какая-то проблема с onclick. Присвоение класса идёт только после второго щелчка. Надо пофиксить
 //Так же посмотреть, что скрывает 'overflow-x: hidden;'
 //Отрегулировать ширину и высоту выпадающего меню для планшетов
+//Убрать внешние отступы у блоков
 
 @import "_var_mix";
 
@@ -34,7 +35,7 @@
     .header__product {
         color: black;
         padding-top: 18px;
-        @include button(black, #00B0FF, 146px);
+        @include button(black, #00b0ff, 146px);
     }
     nav + .header {
         margin-top: -$nav_height_m;
@@ -157,7 +158,7 @@
                     display: none;
                 }
             }
-            @include button(#F8F8F9, #030303, 146px);
+            @include button(#f8f8f9, #030303, 146px);
         }
     }
     .product {
@@ -166,15 +167,21 @@
     .color-change__h2 {
         font-size: 32px;
     }
+    .bg-wrap {
+        background: $gradient_m;
+    }
     .bg-section {
         flex-direction: column;
         height: unset;
-        color: #F8F8F9;
-        padding-bottom: 35px;
+        color: #f8f8f9;
+        padding-bottom: 37px;
         .product {
             padding-left: 0;
+            margin-top: -50px;
             .product__description_short:first-child {
+                line-height: 20px;
                 margin: 0;
+                font-size: 16px;
             }
             .product__description_short {
                 font-style: normal;
@@ -182,6 +189,9 @@
                 // line-height: 20px;
                 font-size: 14px;
                 margin: 14px 0;
+            }
+            .product__wrap_price-buy {
+                margin-top: 33px;
             }
             .product__price {
                 line-height: 39px;
@@ -200,38 +210,107 @@
             margin-top: 6px;
             width: 100%;
         }
-
     }
     .bg-grey_wrap {
         margin-top: 40px;
+        padding-bottom: 36px;
         background: none;
         .container {
-            align-items: center;
-            justify-content: center;
+            align-items: initial;
         }
     }
     .bg-grey {
         flex-direction: column-reverse;
+        align-items: initial;
+        .product {
+            h2 {
+                color: #2b2835;
+                margin-top: 12px;
+                text-transform: uppercase;
+            }
+            > p:first-child {
+                font-size: 16px;
+                line-height: 20px;
+                color: #2b2835;
+            }
+            > p {
+                font-size: 14px;
+                line-height: 27px;
+                color: #030303;
+            }
+            > p:last-child {
+                font-weight: 500;
+                font-size: 13px;
+                line-height: 18px;
+                color: #6a6a6a;
+            }
+            .product__wrap_price-buy {
+                margin: 42px 0 15px 0;
+            }
+            .product__price {
+                line-height: 39px;
+                color: #000000;
+            }
+            @include button(#f8f8f9, #030303, 146px);
+        }
         .product__img {
             margin-right: 0;
             padding: 40px 0;
             img {
-                width: 107.7vw;
+                width: 100%;
             }
         }
     }
-    
+    .product-list {
+        .container {
+            padding-top: initial;
+            .product__name {
+                font-size: 40px;
+            }
+        }
+    }
+    .signup-wrap {
+        background-color: initial;
+    }
+    .signup {
+        width: 79.46vw;
+        margin: 0 22px;
+        background-color: $signup_bg;
+        h2 {
+            font-size: 32px;
+            line-height: 55px;
+            padding: 0;
+        }
+        p {
+            width: 70vw;
+            padding-top: 11px;
+        }
+        form {
+            width: 79.46vw;
+            padding-top: 30px;
+            a {
+                color: black;
+            }
+        }
+    }
+    .footer {
+        
+    }
 }
-
-
-
-
-
 
 //Вспомогательные медиазапросы для некоторых элементов
 @media all and (max-width: 375px) {
     .bg-wrap-img {
         background-image: url(../img/Background/Group-18-m.png);
+    }
+    .bg-wrap {
+        .container {
+            margin: 0;
+        }
+        .product {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
     }
 }
 @media all and (max-width: 360px) {
@@ -241,9 +320,6 @@
         }
     }
 }
-
-
-
 
 @media all and (width: 375px) {
 }
