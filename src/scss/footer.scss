@@ -1,4 +1,4 @@
-@import '_var_mix';
+@import "_var_mix";
 
 footer {
     margin-top: 63px;
@@ -6,20 +6,18 @@ footer {
     width: 100vw;
     .container {
         padding-bottom: 21px;
-        flex-direction: column;
+        justify-content: space-around;
         align-items: stretch;
+        flex-wrap: wrap;
+        padding-top: 55px;
     }
 }
 
-.footer__content_columns {
-    // display: grid;
-    // grid-template-columns: 1fr repeat(4, 2fr);
-    // grid-gap: 6.25%;
-    // padding: 55px 6.25%;
+.footer__list {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    padding: 55px 90px 0 0;
+    width: 67%;
+    // padding-right: 90px;
     li {
         list-style: none;
         padding-bottom: 0.7em;
@@ -33,41 +31,49 @@ footer {
         }
     }
 }
-.footer__content_logo {
+
+.footer__logo {
     text-align: center;
+    // padding-right: 90px;
 }
 
-.footer__content_follow {
-    display: grid;
-}
-
-.footer__content_socials {
-    padding-left: 0;
+.footer___follow {
     display: flex;
-    padding-top: 14px;
-    width: 170px;
-    li {
-        padding: 0;
-        padding-right: 14px;
+    flex-direction: column;
+    > a {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 31px;
+        color: white;
     }
-    li:last-child {
-        padding-right: 0;
-    }
-    i {
-        width: 32px;
-        height: 32px;
-        font-size: 20px;
-        font-weight: normal;
-        text-align: center;
-        line-height: 32px;
-        color: black;
-        background: #fff;
-        border-radius: 50px;
-        margin: auto;
+    .footer___socials {
+        padding-left: 0;
+        display: flex;
+        padding-top: 14px;
+        width: 170px;
+        a {
+            padding: 0;
+            padding-right: 14px;
+        }
+        a:last-child {
+            padding-right: 0;
+        }
+        i {
+            width: 32px;
+            height: 32px;
+            font-size: 20px;
+            font-weight: normal;
+            text-align: center;
+            line-height: 32px;
+            color: black;
+            background: #fff;
+            border-radius: 50px;
+            margin: auto;
+        }
     }
 }
 
-.footer__content_copyright {
+.footer__copyright {
     text-align: center;
     font-weight: 500;
     font-size: 12px;
@@ -76,4 +82,5 @@ footer {
     mix-blend-mode: normal;
     opacity: 0.31;
     padding-top: 83px;
+    padding-bottom: 21px;
 }

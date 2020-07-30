@@ -1,9 +1,13 @@
 <footer class="footer">
   <div class="container">
-    <ul class="footer__content_columns">
-      <li class="footer__content_logo">
-        <a href="#"><img src="../img/icons/logo.png" alt="logo"></a>
-      </li>
+
+    <div class="footer__logo">
+      <a href="#">
+        <img src="../img/icons/logo.png" alt="logo">
+      </a>
+    </div>
+
+    <ul class="footer__list">
       <li>
         <ul>
           <li><a href="#">Products</a></li>
@@ -40,31 +44,21 @@
           <li><a href="#">COOKIES</a></li>
         </ul>
       </li>
-      <li>
-        //Check the branch footer
-        <ul class="footer__content_follow">
-          <li>
-            <a href="#">Follow Us</a>
-          </li>
-          <li>
-            <ul class="footer__content_socials">
-              <li>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-              </li>
-              <li>
-                <a href="#"> <i class="fab fa-facebook-f"></i></a>
-              </li>
-              <li>
-                <a href="#"> <i class="fab fa-twitter"></i></a>
-              </li>
-              <li>
-                <a href="#"> <i class="fab fa-whatsapp"></i></a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
     </ul>
-    <p class="footer__content_copyright">Copyright © 2020 Apple Inc. - All rights reserved.</p>
+
+    <div class="footer___follow">
+      <!--Какой-то очень странный баг. Блоки follow и socials не отображаются, 
+          если в названии их классов меньше трёх нижних_подчёркиваний. -->
+      <a href="#">Follow Us</a>
+      <div class="footer___socials">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+
+    </div>
+
   </div>
+  <p class="footer__copyright">Copyright © 2020 Apple Inc. - All rights reserved.</p>
 </footer>
