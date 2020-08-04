@@ -2,6 +2,8 @@
 //Так же посмотреть, что скрывает 'overflow-x: hidden;'
 //Отрегулировать ширину и высоту выпадающего меню для планшетов
 //Убрать внешние отступы у блоков
+//768-1367 футер настроить
+//Прижать футер
 
 @import "_var_mix";
 
@@ -61,15 +63,12 @@
             background-color: rgb(19, 104, 173);
             min-width: 411px;
             height: 100vh;
-            font-size: 60px;
+            font-size: 50px;
             padding: 20px;
             padding-top: 5px;
             top: 40px;
             left: 0;
             display: none;
-            li {
-                margin-bottom: 10px;
-            }
             li:last-child {
                 margin-bottom: 0;
             }
@@ -275,6 +274,7 @@
     .signup {
         width: 79.46vw;
         margin: 0 22px;
+        padding-bottom: 0;
         background-color: $signup_bg;
         h2 {
             font-size: 32px;
@@ -294,7 +294,25 @@
         }
     }
     .footer {
-        
+        .container {
+            flex-direction: column;
+            align-items: center;
+            padding-top: 30px;
+        }
+        .footer__logo {
+            margin-bottom: 35px;
+        }
+        .footer__list {
+            flex-direction: column;
+            text-align: center;
+            width: initial;
+            li:first-child {
+                padding-bottom: 4px;
+            }
+        }
+        .footer___follow {
+            text-align: center;
+        }
     }
 }
 

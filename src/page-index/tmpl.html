@@ -231,6 +231,12 @@
   </main>
 
   <%= require('html-loader!../partials/footer.html') %>
+  <script>
+      var el = document.querySelector('.nav__burger');
+      el.onclick = function () {
+        document.querySelector('.nav__menu').classList.toggle('open');
+      }
+  </script>
 </body>
 
 </html>

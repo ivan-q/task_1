@@ -1,13 +1,8 @@
-<script>
-  function toggleMenu() {
-    document.getElementById('nav__burger').onclick = function() {
-      document.getElementById('nav__menu').classList.toggle('open');
-    }
-}
-</script>
+
+
 <nav>
   <div class="nav__list container">
-    <div class="nav__burger" onclick="toggleMenu()" id="nav__burger">
+    <div class="nav__burger" id="nav__burger">
       <div></div>
       <div></div>
       <div></div>
@@ -15,7 +10,7 @@
     <div class="nav__item nav__logo">
       <a href="../../dist/index.html"><img src="../img/icons/logo.png" alt=""></a>
     </div>
-    <ul class="nav__item" id="nav__menu">
+    <ul class="nav__item nav__menu" id="nav__menu">
       <li><a href="#">HEADPHONES</a></li>
       <li><a href="#">EARPHONES</a></li>
       <li><a href="#">SPEAKERS</a></li>
