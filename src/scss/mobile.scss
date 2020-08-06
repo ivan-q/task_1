@@ -90,6 +90,10 @@
                     height: 22px;
                 }
             }
+            .nav__cart::after {
+                top: -3px;
+                right: -6px;
+            }
         }
     }
     .product__description_short {
@@ -293,10 +297,12 @@
             }
         }
     }
+
     .footer {
         .container {
             flex-direction: column;
             align-items: center;
+            margin: 0;
             padding-top: 30px;
         }
         .footer__logo {
@@ -305,14 +311,59 @@
         .footer__list {
             flex-direction: column;
             text-align: center;
-            width: initial;
-            li:first-child {
-                padding-bottom: 4px;
+            width: 100%;
+            .footer__name {
+                padding-top: 5px;
+                padding-bottom: 12px;
+                font-size: 20px;
+                height: 45px;   
+                width: 100%;
+                padding-bottom: 0;
             }
+            
+            ul li:not(:first-child) {
+                mix-blend-mode: normal;
+                opacity: 0.39;
+            }
+            ul:first-child {
+                // padding-bottom: 50px;
+            }
+        }
+        h2 {
+            font-size: 20px;
+            color: white;
         }
         .footer___follow {
             text-align: center;
+            padding-top: 12px;
+            padding-bottom: 40px;
+            .footer___socials {
+                padding-top: 19px;
+            }
         }
+        .footer__copyright {
+            display: none;
+        }
+        .footer__elem_open {
+            padding-bottom: 50px;
+            border: none;
+        }
+        .footer__elem_closed {
+            padding-bottom: 0;
+            .footer__name {
+                border-top: 0.5px solid #000;
+            }
+            .footer__elem_company {
+                border-bottom: 0.5px solid #000;
+            }
+        }
+
+        .footer__link {
+            display: none;
+        }
+        // .open_footer {
+        //     display: initial;
+        // }
     }
 }
 
