@@ -1,5 +1,3 @@
-//Какая-то проблема с onclick. Присвоение класса идёт только после второго щелчка. Надо пофиксить
-//Так же посмотреть, что скрывает 'overflow-x: hidden;'
 //Отрегулировать ширину и высоту выпадающего меню для планшетов
 //Убрать внешние отступы у блоков
 //768-1367 футер настроить
@@ -166,6 +164,7 @@
     }
     .product {
         margin-top: -40px;
+        align-self: flex-start;
     }
     .color-change__h2 {
         font-size: 32px;
@@ -325,9 +324,7 @@
                 mix-blend-mode: normal;
                 opacity: 0.39;
             }
-            ul:first-child {
-                // padding-bottom: 50px;
-            }
+         
         }
         h2 {
             font-size: 20px;
@@ -390,12 +387,24 @@
     }
 }
 
+@media all and (min-width: 573px) and (max-width: 767px) {
+    .header__product {
+        align-self: flex-start;
+    }
+    .header__bg {
+        max-width: 90%;
+    }
+    nav + .header {
+        margin-top: -$nav_height_m_big;
+    }
+    .nav__list {
+        height: $nav_height_m_big;
+    }
+}
+
 @media all and (width: 375px) {
 }
 
 @media all and (width: 1440px) {
 }
 
-//Планшеты
-@media all and (max-width: 1200px - 1px) {
-}

@@ -1,0 +1,95 @@
+@import "_var_mix";
+
+//Планшеты
+@media all and (min-width: 768px) and (max-width: 1200px - 1px) {
+    .container {
+        margin: 0 3%;
+    }
+    .header {
+        min-height: 500px;
+        .container {
+            position: relative;
+        }
+        .header__bg {
+            left: -3%;
+            top: 0;
+        }
+    }
+    .header__product {
+        margin-right: 0;
+        max-width: min-content;
+        padding-top: 120px;
+        .product__button {
+            width: 200px;
+        } 
+    }
+    nav .container {
+        flex-wrap: nowrap;
+    }
+    nav {
+        .nav__icons {
+            width: 18%;
+            padding-left: 0;
+            a {
+                width: 22px;
+            }
+            img {
+                object-fit: scale-down;
+                max-width: 100%;
+            }
+        }
+    }
+
+    .bg-grey .product__img {
+        margin-right: 0;
+    }
+    .product__name_header
+     {
+        font-size: 30px;
+    }
+
+}
+
+
+
+
+
+
+@media all and (min-width: 768px) and (max-width: 900px) {
+    .nav__menu {
+        a {
+            font-size: 12px;
+        }
+    }
+    .nav__logo {
+        img {
+            width: 36px;
+        }
+    }
+    .header .header__bg {
+        width: 70%;
+        left: -6%;
+    }
+    .header__product .product__button {
+        width: 140px;
+    } 
+}
+
+
+
+
+
+
+@media all and (min-width: 900px) and (max-width: 1200px - 1px) {
+    nav {
+        .nav__menu {
+            justify-content: space-around;
+        }
+        .nav__icons {
+            width: 13%;
+        }
+    }
+    .header__product {
+        max-width: 47%;
+    }
+}
