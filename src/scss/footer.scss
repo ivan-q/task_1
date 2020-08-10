@@ -34,6 +34,12 @@ footer {
             line-height: 31px;
         }
     }
+        width: 80%;
+        ul li:not(:first-child) {
+            mix-blend-mode: normal;
+            opacity: 0.39;
+        }
+
 }
 
 .footer__logo {
@@ -53,6 +59,7 @@ footer {
     h2 {
         font-size: 24px;
         color: white;
+        line-height: 31px;
     }
     .footer___socials {
         padding-left: 0;
