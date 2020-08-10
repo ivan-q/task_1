@@ -231,3 +231,40 @@
         width: initial;
     }
 }
+
+@media all and (min-width: 1200px) and (max-width: 1400px) {
+    .header {
+        min-height: 45vw;
+       
+        .header__product {
+            margin-right: 0;
+        }
+    }
+}
+
+//Переопределение стилей для больших экранов
+@media all and (min-width: 1440px) {
+    .bg-grey .product__img img {
+        width: initial;
+    }
+}
+@media all and (min-width: 1688px) {
+    .header__bg {
+        margin-left: 10%;
+    }
+}
+@media all and (min-width: 2100px) {
+    .header__bg {
+        margin-left: 20%;
+    }
+}
+@media all and (min-width: 2600px) {
+    .header__bg {
+        margin-left: 26%;
+    }
+}
+@media all and (min-width: 3100px) {
+    .header__bg {
+        margin-left: 30%;
+    }
+}
