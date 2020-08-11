@@ -15,6 +15,8 @@ require('../scss/footer.scss')
 require('../scss/media.scss')
 require('../scss/mobile.scss')
 require('../scss/tablet.scss')
+require('../scss/pixel_perfect_1440px.scss')
+require('../scss/pixel_perfect_375px.scss')
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DOMContentLoaded', 'page-index')

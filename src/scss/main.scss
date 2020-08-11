@@ -75,6 +75,9 @@ main > * {
     font-size: 40px;
     margin-bottom: 40px;
 }
+.product__name_1440 {
+    display: none;
+}
 
 .product .product__name {
     font-weight: bold;
@@ -154,7 +157,6 @@ main > * {
     background-image: url(../img/Background/Group-18.png);
     background-repeat: no-repeat;
 }
-
 
 
 .bg-grey_wrap {

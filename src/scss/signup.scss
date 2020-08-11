@@ -2,13 +2,14 @@
 
 .signup-wrap {
     margin-top: 105px;
-    // padding: 105px 94px 0 94px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: $signup_bg;
+    
     .container {
         justify-content: center;
+        background: $signup_bg;
+        width: 1248px;
     }
 }
 
