@@ -1,5 +1,111 @@
 @import "_var_mix";
 
 @media all and (width: 375px) {
+    .header::after {
+        min-height: 208px;
+    }
+    .header__bg {
+        margin-left: 4.5%;
+    }
+    .header__product {
+        .product__description_short {
+            letter-spacing: 1px;
+            margin-top: 3px;
+        }
+        .product__name_header {
+            margin-top: 6px;
+        }
+        .product__button {
+            width: 146px;
+        }
+        .product__price_header {
+            margin-right: 6px;
+        }
+        .product__wrap_price-buy {
+            margin-top: 23px;
+            margin-bottom: 11px;
+        }
+    }
 
+    .slider-section {
+        padding-bottom: 91px;
+        .container .buy-section__slider {
+            width: 348px;
+            padding-top: 22px;
+            padding-bottom: 0;
+            margin-left: -5px;
+        }
+        .product {
+            .product__name {
+                margin-top: -1px;
+            }
+        }
+        .color-change {
+            margin-left: 5px;
+            .color-change__h2 {
+                line-height: 50px;
+            }
+            .color-change__p {
+                margin-left: 3px;
+            }
+            .color-change__circles {
+                margin-left: 4px;
+                margin-bottom: 27px;
+            }
+        }
+    }
+
+    .bg-section {
+        img {
+            margin-top: -45px;
+        }
+        .product {
+            .product__name {
+                margin-top: -10px;
+                margin-bottom: 4px;
+            }
+            .product__description_short {
+                margin: 0;
+                line-height: 27px;
+            }
+            .product__wrap_price-buy {
+                margin-top: 25px;
+            }
+            .product__button {
+                width: 146px;
+            }
+        }
+    }
+
+    .bg-grey_wrap {
+        .product__img {
+            padding-top: 0;
+            img {
+                margin-left: -16px;
+                width: 107vw;
+                margin-left: -31px;
+            }
+        }
+        .product {
+            h2 {
+                margin-top: 9px;
+            }
+            p {
+                letter-spacing: -0.12px;
+            }
+            .product__wrap_price-buy {
+                margin: 38px 0 13px 0;
+            }
+        }
+    }
+
+    .product__price {
+        margin-right: 6px;
+    }
+    .product__description_long {
+        line-height: 18px;
+        mix-blend-mode: normal;
+        opacity: 0.68;
+        max-width: 284px;
+    }
 }
