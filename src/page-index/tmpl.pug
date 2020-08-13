@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        title Mainpage
+        meta(charset='UTF-8')
+        // <meta http-equiv="cache-control" content="no-cache"/>
+        // <meta http-equiv="pragma" content="no-cache"/>
+        // <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        meta(name='viewport' content='width=device-width,user-scalable=0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0')
+        link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap' rel='stylesheet')
+        link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css' integrity='sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/' crossorigin='anonymous')
+
+    body
+        main.main
+            include ../partials/nav.pug
+            include ../partials/header_section.pug
+            include ../partials/slider_section.pug
+            include ../partials/bg_section.pug
+            include ../partials/bg_grey_section.pug
+            include ../partials/product_list.pug
+            include ../partials/signup.pug
+
+        include ../partials/footer.pug
+        script.
+            const nav = document.querySelector('.nav__burger');
+            nav.onclick = function () {
+            document.querySelector('.nav__menu').classList.toggle('open');
+            }

@@ -48,6 +48,10 @@ module.exports = {
         ]
       },
       {
+        test: /\.pug$/,
+        use: 'pug-loader'
+      },
+      {
         // Load all images as base64 encoding if they are smaller than 8192 bytes
         test: /\.(png|jpe?g|gif|svg)$/i,
         use: [
@@ -68,7 +72,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(), // cleans output.path by default
     new HtmlWebpackPlugin({
-      template: './src/page-index/tmpl.html',
+      template: './src/page-index/tmpl.pug',
       inject: 'body',
       chunks: ['index'],
       filename: 'index.html',

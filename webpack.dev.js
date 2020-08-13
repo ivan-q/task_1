@@ -15,13 +15,12 @@ module.exports = {
     contacts: './src/page-contacts/main.js'
   },
 
-  // https://webpack.js.org/configuration/dev-server/
+  
   devServer: {
-    port: 8080,
-    writeToDisk: false // https://webpack.js.org/configuration/dev-server/#devserverwritetodisk-
+    port: 4040,
+    writeToDisk: false
   },
 
-  // https://webpack.js.org/concepts/loaders/
   module: {
     rules: [
       {
@@ -41,10 +40,10 @@ module.exports = {
           // Please note we are not running postcss here
         ]
       },
-      // {
-      //   test: /\.css$/,
-      //   loader: MiniCssExtractPlugin.loader
-      // },
+      {
+        test: /\.pug$/,
+        use: 'pug-loader'
+      },
       {
         // Load all images as base64 encoding if they are smaller than 8192 bytes
         test: /\.(png|jpe?g|gif|svg)$/i,
@@ -66,7 +65,7 @@ module.exports = {
   // https://webpack.js.org/concepts/plugins/
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/page-index/tmpl.html',
+      template: './src/page-index/tmpl.pug',
       inject: true,
       chunks: ['index'],
       filename: 'index.html'
@@ -83,8 +82,8 @@ module.exports = {
       chunks: ['contacts'],
       filename: 'contacts.html'
     }),
-    // new MiniCssExtractPlugin({
-    //   filename: "[name].css",
-    // })
+    new MiniCssExtractPlugin({
+      filename: "[name].css",
+    })
   ]
 }

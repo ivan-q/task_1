@@ -26,11 +26,12 @@
     //header-section
     .header__bg {
         left: 0;
+        width: initial;
     }
     .header__product {
         width: 500px;
         margin-right: 45px;
-        padding-top: 201px;
+        padding-top: 194px;
         .product__description_short {
             margin-bottom: 10px;
             letter-spacing: 1px;
@@ -49,7 +50,7 @@
     //slider-section
     .slider-section {
         .product {
-            margin-top: 174px;
+            margin-top: 194px;
             .product__description_short {
                 margin-bottom: 6px;
                 letter-spacing: -0.4px;
