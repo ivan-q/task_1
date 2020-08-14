@@ -1,21 +1,24 @@
 //Отрегулировать ширину и высоту выпадающего меню для планшетов
 //Убрать внешние отступы у блоков
-//768-1367 футер настроить
 //Прижать футер
 
 @import "_var_mix";
 
+@media all and (min-width: 768px) and (max-width: 1440px) {
+    .container {
+        width: initial;
+        margin: 0 96px;
+    }
+}
+
 //Мобильные телефоны
 @media all and (max-width: 768px - 1px) {
     .container {
-        // width: 100vw - 2.6vw;
         width: initial;
         margin: 0 20px;
     }
     .header {
         min-height: unset;
-        // max-height: 58vw;
-        // z-index: initial;
         background-color: transparent;
     }
     .header::after {

@@ -6,7 +6,7 @@ $product_price: #9d8220;
 $product_price_big: #ffff00;
 $gradient: linear-gradient(132.34deg, #e040fb 14.55%, #0a00b6 84.03%); //Градиент в блоке с абстрактным
 // фоновым рисунком
-$gradient_m: linear-gradient(195.81deg, #E040FB 6.72%, #0A00B6 95.49%); //Градиент для мобильной версии
+$gradient_m: linear-gradient(195.81deg, #e040fb 6.72%, #0a00b6 95.49%); //Градиент для мобильной версии
 $grey_bg: #f4f4f4; //Цвет фона в четвёртой секции главной страницы
 $description: #00b0ff; //Последняя строка текста в первом блоке главной страницы
 
@@ -51,8 +51,12 @@ $nav_height_m_big: 50px; //Высота навбара на экранах 573px
     @include button(white, black, 145px);
 }
 
-
+@mixin font {
+    font-weight: 0;
+    font-size: 0;
+    line-height: 0;
+    color: initial;
+}
 
 @mixin product {
-    
 }

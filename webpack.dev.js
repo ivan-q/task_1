@@ -23,7 +23,7 @@ module.exports = {
 
   module: {
     rules: [
-      {
+      { //babel
         test: /\.js$/i,
         exclude: /node_modules/,
         loader: 'babel-loader',
@@ -31,8 +31,8 @@ module.exports = {
           presets: ['@babel/preset-env']
         }
       },
-      {
-        test: /\.(css|scss)(\?.*)?$/i,
+      { //sass
+        test: /\.(css|scss|sass)(\?.*)?$/i,
         use: [
           'style-loader',
           'css-loader',
@@ -40,12 +40,11 @@ module.exports = {
           // Please note we are not running postcss here
         ]
       },
-      {
+      { //pug
         test: /\.pug$/,
         use: 'pug-loader'
       },
-      {
-        // Load all images as base64 encoding if they are smaller than 8192 bytes
+      { // Load all images as base64 encoding if they are smaller than 8192 bytes
         test: /\.(png|jpe?g|gif|svg)$/i,
         use: [
           {

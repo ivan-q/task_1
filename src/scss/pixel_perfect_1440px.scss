@@ -36,12 +36,6 @@
             margin-bottom: 10px;
             letter-spacing: 1px;
         }
-        .product__name_header {
-            display: none;
-        }
-        .product__name_1440 {
-            display: initial;
-        }
         .product__wrap_price-button {
             margin-top: 39px;
         }
@@ -68,8 +62,7 @@
     .bg-section {
         img {
         width: initial;
-        margin-top: -29px;
-        margin-left: -47px;
+        margin: -29px 0 0 -47px;
         }
         .product {
             display: flex;

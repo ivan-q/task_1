@@ -32,21 +32,17 @@ main > * {
         font-size: 16px;
         margin-bottom: 13px;
     }
-
-    &__name_header {
-        font-weight: bold;
-        font-size: 40px;
-        margin-bottom: 40px;
-    }
-    &__name_1440 {
-        display: none;
-    }
-
     &__name {
         font-weight: bold;
         font-size: 50px;
         margin-left: -3px;
         margin-bottom: 20px;
+    }
+    &__name_header {
+        font-weight: bold;
+        font-size: 40px;
+        margin-bottom: 40px;
+        margin-top: 0px
     }
 
     &__wrap_price-button {
@@ -228,4 +224,15 @@ main > * {
         margin: 0;
         padding-top: 7px;
     }
+}
+
+//Стили для тега <sup>
+.plus-sign {
+    position: relative;
+    top: -2rem;
+    margin-left: -0.3rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 55px;
 }
