@@ -42,7 +42,7 @@
         .product__name_1440 {
             display: initial;
         }
-        .product__wrap_price-buy {
+        .product__wrap_price-button {
             margin-top: 39px;
         }
     }
@@ -86,7 +86,7 @@
         .product__name {
             margin-bottom: 23px;
         }
-        .product__wrap_price-buy {
+        .product__wrap_price-button {
             margin-top: 71px;
         }
         .product__description_long {
@@ -95,17 +95,17 @@
     }
 
     //bg-grey
-    .bg-grey_wrap .product {
+    .simple_wrap .product {
         margin-top: -80px; 
     }
     .product__description_short {
         margin: 0;
         line-height: 27px;
     }
-    .product__wrap_price-buy {
+    .product__wrap_price-button {
         margin-top: 71px;
     }
-    .bg-grey .product__img {
+    .simple .product__img {
         margin-right: -11%;
     }
 

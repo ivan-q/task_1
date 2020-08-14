@@ -14,7 +14,7 @@
             left: -3%;
             top: 0;
         }
-        .product__wrap_price-buy {
+        .product__wrap_price-button {
             margin-top: 26px;
         }
     }
@@ -92,7 +92,7 @@
 
 
 
-    .bg-grey .product__img {
+    .simple .product__img {
         margin-right: 0;
         img {
             width: 60vw;
@@ -240,7 +240,7 @@
 
 //Переопределение стилей для больших экранов
 @media all and (min-width: 1440px) {
-    .bg-grey .product__img img {
+    .simple .product__img img {
         width: initial;
     }
 }

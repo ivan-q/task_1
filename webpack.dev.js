@@ -11,8 +11,8 @@ module.exports = {
   // https://webpack.js.org/concepts/entry-points/#multi-page-application
   entry: {
     index: './src/page-index/main.js',
-    about: './src/page-about/main.js',
-    contacts: './src/page-contacts/main.js'
+    // about: './src/page-about/main.js',
+    // contacts: './src/page-contacts/main.js'
   },
 
   
@@ -70,20 +70,21 @@ module.exports = {
       chunks: ['index'],
       filename: 'index.html'
     }),
-    new HtmlWebpackPlugin({
-      template: './src/page-about/tmpl.html',
-      inject: true,
-      chunks: ['about'],
-      filename: 'about.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/page-contacts/tmpl.html',
-      inject: true,
-      chunks: ['contacts'],
-      filename: 'contacts.html'
-    }),
-    new MiniCssExtractPlugin({
-      filename: "[name].css",
-    })
+    // new HtmlWebpackPlugin({
+    //   template: './src/page-about/tmpl.html',
+    //   inject: true,
+    //   chunks: ['about'],
+    //   filename: 'about.html'
+    // }),
+    // new HtmlWebpackPlugin({
+    //   template: './src/page-contacts/tmpl.html',
+    //   inject: true,
+    //   chunks: ['contacts'],
+    //   filename: 'contacts.html'
+    // }),
+    
+    // new MiniCssExtractPlugin({
+    //   filename: "[name].css",
+    // })
   ]
 }

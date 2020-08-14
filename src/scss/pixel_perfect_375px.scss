@@ -21,7 +21,7 @@
         .product__price_header {
             margin-right: 6px;
         }
-        .product__wrap_price-buy {
+        .product__wrap_price-button {
             margin-top: 23px;
             margin-bottom: 11px;
         }
@@ -68,7 +68,7 @@
                 margin: 0;
                 line-height: 27px;
             }
-            .product__wrap_price-buy {
+            .product__wrap_price-button {
                 margin-top: 25px;
             }
             .product__button {
@@ -77,7 +77,7 @@
         }
     }
 
-    .bg-grey_wrap {
+    .simple_wrap {
         .product__img {
             padding-top: 0;
             img {
@@ -93,7 +93,7 @@
             p {
                 letter-spacing: -0.12px;
             }
-            .product__wrap_price-buy {
+            .product__wrap_price-button {
                 margin: 38px 0 13px 0;
             }
         }

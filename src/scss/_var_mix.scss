@@ -20,16 +20,18 @@ $nav_height_m_big: 50px; //Высота навбара на экранах 573px
 
 //Делая @include в родительском блоке с кнопкой, в круглых скобках
 //указываем три параметра через запятую: цвет текста, цает фона, ширина
-@mixin button($text_color, $bg_color, $width) {
+@mixin button($text, $bg, $width) {
+    .product-list__button,
     .product__button {
-        height: 41px;
         border-radius: 100px;
-        line-height: 41px;
         text-align: center;
         font-weight: 600;
-        color: $text_color;
-        background: $bg_color;
+        text-transform: uppercase;
+        color: $text;
+        background: $bg;
         width: $width;
+        height: 41px;
+        line-height: 41px; //Вывести высоту в одну переменную, разобраться
     }
 }
 //Здесь меняем цвет и ширину кнопок на сайте (за исключением мобильной версии)
@@ -42,9 +44,15 @@ $nav_height_m_big: 50px; //Высота навбара на экранах 573px
 .bg-section {
     @include button(white, black, 170px);
 }
-.bg-grey {
+.simple {
     @include button(white, black, 110px);
 }
 .product-list {
     @include button(white, black, 145px);
+}
+
+
+
+@mixin product {
+    
 }

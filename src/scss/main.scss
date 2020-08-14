@@ -12,8 +12,6 @@ html {
 body {
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
     font-size: 14px;
-    margin: 0;
-    padding: 0;
 }
 
 main > * {
@@ -26,31 +24,68 @@ main > * {
     margin: 0 auto;
 }
 
+//Стили для контейнера .product
+.product {
+    margin-top: 239px;
+    &__description_short {
+        font-weight: 500;
+        font-size: 16px;
+        margin-bottom: 13px;
+    }
 
+    &__name_header {
+        font-weight: bold;
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+    &__name_1440 {
+        display: none;
+    }
 
+    &__name {
+        font-weight: bold;
+        font-size: 50px;
+        margin-left: -3px;
+        margin-bottom: 20px;
+    }
+
+    &__wrap_price-button {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+        margin-top: 51px;
+    }
+
+    &__price {
+        font-size: 40px;
+        margin-right: 43px;
+    }
+
+    &__price_header {
+        margin-right: 34px;
+    }
+
+    &__description_long {
+        font-weight: 500;
+        font-size: 13px;
+    }
+}
+
+//Первая секция главной страницы
 .header {
     min-height: 616px;
     background-color: $main_bg;
     .container {
-        display: flex;
         flex-direction: column;
         align-content: center;
-        // background-image: url(../img/Background/headphones.png);
-        // background-repeat: no-repeat;
     }
 }
-
-.product {
-    margin-top: 239px;
-}
-
 .header__bg {
     position: absolute;
     left: -1%;
     z-index: 1;
     width: 59.4%;
 }
-
 .header__product {
     align-self: flex-end;
     position: relative;
@@ -64,82 +99,37 @@ main > * {
     }
 }
 
-.product__description_short {
-    font-weight: 500;
-    font-size: 16px;
-    margin-bottom: 13px;
-}
-
-.product__name_header {
-    font-weight: bold;
-    font-size: 40px;
-    margin-bottom: 40px;
-}
-.product__name_1440 {
-    display: none;
-}
-
-.product .product__name {
-    font-weight: bold;
-    font-size: 50px;
-    // font-size: 3.4em;
-    margin-left: -3px;
-    margin-bottom: 20px;
-}
-
-.product__wrap_price-buy {
-    display: flex;
-    align-items: center;
-    margin-bottom: 12px;
-    margin-top: 51px;
-}
-
-.product__price {
-    font-size: 40px;
-    margin-right: 43px;
-}
-
-.product__price_header {
-    margin-right: 34px;
-}
-
-.product__description_long {
-    font-weight: 500;
-    font-size: 13px;
-}
-
+//Секция со слайдером
 .slider-section {
     padding-bottom: 175px;
     .container {
-        display: flex;
         justify-content: space-between;
-        .buy-section__slider {
-            margin-right: -4%;
-            img {
-                max-width: 755px;
-            }
+    }
+    .buy-section__slider {
+        margin-right: -4%;
+        img {
+            max-width: 755px;
         }
     }
 }
 
+//Секция с градиенным фоном
 .bg-section {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     color: #fff;
     height: 842px;
-
-    .product__name {
-        text-transform: uppercase;
-        font-weight: bold;
-    }
-    .product__price {
-        color: $product_price_big;
-    }
-
     .product {
         padding-left: 32px;
         margin-top: 0;
+        .product__name {
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .product__price {
+            color: $product_price_big;
+        }
     }
     img {
         margin-left: -60px;
@@ -158,20 +148,18 @@ main > * {
     background-repeat: no-repeat;
 }
 
-
-.bg-grey_wrap {
+//Секция simple_section
+.simple_wrap {
     margin-top: 171px;
     background: $grey_bg;
-    .product {
-        margin-top: 0;
-    }
 }
-
-.bg-grey {
+.simple {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    .product {
+        margin-top: 0;
+    }
     .product__img {
         padding-top: 38px;
         padding-bottom: 67px;
@@ -182,6 +170,7 @@ main > * {
     }
 }
 
+//Список товаров
 .product-list {
     .container {
         max-width: 1248px;
@@ -191,16 +180,17 @@ main > * {
         grid-template-columns: repeat(auto-fill, minmax(296px, 1fr));
         grid-gap: 40px 20px;
     }
-}
-
-.product-list__item {
-    display: grid;
-    grid-template-rows: auto 1fr;
-    justify-items: center;
-    align-items: end;
-    background: $product_bg;
-    // max-width: 296px;
-    .product-list__img {
+    &__item {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        justify-items: center;
+        align-items: end;
+        background: $product_bg;
+    }
+    &__wrap {
+        padding: 0 20px 36px 20px;
+    }
+    &__img {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -210,46 +200,32 @@ main > * {
             height: 100%;
         }
     }
-    .product__name {
+    &__name {
         font-style: normal;
         font-weight: 500;
         font-size: 36px;
         line-height: 55px;
         color: #2b2835;
     }
-  
-    .product__price {
+
+    &__price {
         margin: 0;
         font-weight: 600;
         font-size: 25px;
         line-height: 30px;
         color: $product_price;
     }
-    .product__description_short {
+    &__description_short {
         font-style: normal;
         font-weight: normal;
         font-size: 14px;
         line-height: 21px;
     }
-    .product__wrap_price-buy {
+    &__wrap_price-button {
         display: flex;
+        align-items: center;
         justify-content: space-between;
         margin: 0;
         padding-top: 7px;
     }
-}
-
-.product__wrap {
-    padding: 0 20px 36px 20px;
-}
-
-
-
-
-
-
-
-//test style for pug integration
-.test {
-    color: red;
 }
