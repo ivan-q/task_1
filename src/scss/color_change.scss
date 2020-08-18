@@ -1,8 +1,13 @@
+@import "_var_mix";
+
 .color-change__h2 {
     font-size: 40px;
     line-height: 55px;
     font-style: normal;
     font-weight: normal;
+    @include mobile {
+        font-size: 32px;
+    }
 }
 
 .color-change__p {

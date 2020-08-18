@@ -1,20 +1,17 @@
 @import "_var_mix";
 
 //Планшеты
-@media all and (min-width: 768px) and (max-width: 1200px - 1px) {
-    .container {
-        margin: 0 3%;
-    }
+@media (min-width: 768px) and (max-width: 1200px - 1px) {
     .header {
         min-height: 390px;
         .container {
             position: relative;
         }
-        .header__bg {
+        &__bg {
             left: -3%;
             top: 0;
         }
-        .product__wrap_price-button {
+        .product__wrap {
             margin-top: 26px;
         }
     }
@@ -24,27 +21,13 @@
         padding-top: 110px;
         .product__button {
             width: 200px;
-        } 
+        }
     }
     nav .container {
         flex-wrap: nowrap;
     }
-    nav {
-        .nav__icons {
-            width: 18%;
-            padding-left: 0;
-            a {
-                width: 22px;
-            }
-            img {
-                object-fit: scale-down;
-                max-width: 100%;
-            }
-        }
-    }
 
-    .product__name_header
-     {
+    .product__title_header {
         font-size: 30px;
         margin-bottom: 0;
     }
@@ -54,18 +37,18 @@
         .container {
             min-height: 800px;
         }
-        .buy-section__slider {
+        .slider {
             align-content: center;
             flex-wrap: wrap;
             padding: 0;
             img {
                 width: 51.4vw;
             }
-            .buy-section__pagination {
+            .pagination {
                 margin-top: -50px;
             }
         }
-        .container .buy-section__slider {
+        .container .slider {
             margin-right: 0;
         }
         .product {
@@ -90,8 +73,6 @@
         }
     }
 
-
-
     .simple .product__img {
         margin-right: 0;
         img {
@@ -99,14 +80,7 @@
             margin-right: -50px;
         }
     }
-
-
-
 }
-
-
-
-
 
 @media all and (min-width: 768px) and (max-width: 900px) {
     .nav__menu {
@@ -114,22 +88,45 @@
             font-size: 12px;
         }
     }
+    .product__title_header {
+        font-size: 24px;
+    }
+    .product__price_header {
+        margin-right: 25px;
+    }
     .nav__logo {
         img {
             width: 36px;
         }
     }
-    .header .header__bg {
-        width: 70%;
-        left: -6%;
+    .nav__icons {
+        width: 143px;
     }
-    .header__product .product__button {
-        width: 140px;
-    } 
+    .header {
+        &__bg {
+            width: 70%;
+            left: -6%;
+        }
+    }
+    .header__product {
+        margin-left: 15px;
+        .product__button {
+            width: 140px;
+        }
+    }
 }
 
-
-
+@media (width: 1366px) {
+    section.header {
+        min-height: 39vw;
+        .header__bg {
+            width: 54vw;
+        }
+        .header__product {
+            padding-top: 175px;
+        }
+    }
+}
 
 @media all and (min-width: 900px) and (max-width: 1200px - 1px) {
     nav {
@@ -137,7 +134,7 @@
             justify-content: space-around;
         }
         .nav__icons {
-            width: 13%;
+            width: 17%;
         }
     }
     .header__product {
@@ -155,7 +152,7 @@
     .header {
         min-height: 450px;
         .header__bg {
-            width: 580px
+            width: 580px;
         }
         .header__product {
             padding-top: 140px;
@@ -172,7 +169,6 @@
     .footer___follow {
         h2 {
             font-size: 20px;
-            
         }
         .footer___socials {
             i {
@@ -193,7 +189,6 @@
             font-size: 12px;
         }
     }
-    
 }
 
 @media all and (min-width: 768px) and (max-width: 944px) {
@@ -213,11 +208,11 @@
         }
     }
     .footer__copyright {
-    padding-top: 50px;
+        padding-top: 50px;
     }
 }
 
-@media all and (min-width: 945px) {
+@media (min-width: 945px) {
     .footer__list {
         flex-wrap: nowrap;
         width: 67%;
@@ -227,16 +222,15 @@
     }
 }
 
-@media all and (min-width: 1200px) and (max-width: 1400px) {
+@media (min-width: 1200px) and (max-width: 1400px) {
     .header {
         min-height: 45vw;
-       
+
         .header__product {
             margin-right: 0;
         }
     }
 }
-
 
 //Переопределение стилей для больших экранов
 @media all and (min-width: 1440px) {

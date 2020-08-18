@@ -10,14 +10,34 @@ footer {
         align-items: stretch;
         flex-wrap: wrap;
         padding-top: 55px;
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding-top: 30px;
+        }
     }
 }
 
 .footer__list {
     display: flex;
     justify-content: space-between;
-    width: 67%;
-    // padding-right: 90px;
+    width: 80%;
+    @include mobile {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+    .footer__name {
+        @include mobile {
+            font-size: 20px;
+            padding-top: 5px;
+            padding-bottom: 12px;
+            height: 45px;
+            width: 100%;
+            padding-bottom: 0;
+        }
+    }
     li {
         list-style: none;
         padding-bottom: 0.7em;
@@ -29,43 +49,50 @@ footer {
             opacity: initial;
         }
         li:nth-child(1) {
-            font-weight: 600;
-            font-size: 24px;
-            line-height: 31px;
+            @include font(600, 24px, 31px);
         }
     }
-        width: 80%;
-        ul li:not(:first-child) {
-            mix-blend-mode: normal;
-            opacity: 0.39;
-        }
-
+    ul li:not(:first-child) { //Пункты списков кроме заголовка
+        mix-blend-mode: normal;
+        opacity: 0.39;
+    }
 }
 
 .footer__logo {
     text-align: center;
-    // padding-right: 90px;
+    @include mobile {
+        margin-bottom: 35px;
+    }
 }
 
 .footer___follow {
     display: flex;
     flex-direction: column;
+    @include mobile {
+        text-align: center;
+        padding-top: 12px;
+        padding-bottom: 40px;
+    }
     > a {
-        font-weight: 600;
-        font-size: 24px;
-        line-height: 31px;
+        @include font(600, 24px, 31px);
         color: white;
     }
     h2 {
         font-size: 24px;
-        color: white;
         line-height: 31px;
+        color: white;
+        @include mobile {
+            font-size: 20px;
+        }
     }
     .footer___socials {
         padding-left: 0;
         display: flex;
         padding-top: 14px;
         width: 170px;
+        @include mobile {
+            padding-top: 19px;
+        }
         a {
             padding: 0;
             padding-right: 14px;
@@ -76,10 +103,8 @@ footer {
         i {
             width: 32px;
             height: 32px;
-            font-size: 20px;
-            font-weight: normal;
+            @include font(normal, 20px, 32px);
             text-align: center;
-            line-height: 32px;
             color: black;
             background: #fff;
             border-radius: 50px;
@@ -98,4 +123,29 @@ footer {
     opacity: 0.31;
     padding-top: 83px;
     padding-bottom: 21px;
+    @include mobile {
+        display: none;
+    }
+}
+
+//Также mobile
+@media (max-width: 768px - 1px) {
+    .footer {
+        &__elem_open {
+            padding-bottom: 50px;
+            border: none;
+        }
+        &__elem_closed {
+            padding-bottom: 0;
+            .footer__name {
+                border-top: 0.5px solid #000;
+            }
+            .footer__elem_company {
+                border-bottom: 0.5px solid #000;
+            }
+        }
+        &__link {
+            display: none;
+        }
+    }
 }

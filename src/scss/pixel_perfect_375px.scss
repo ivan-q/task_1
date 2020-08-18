@@ -8,11 +8,11 @@
         margin-left: 4.5%;
     }
     .header__product {
-        .product__description_short {
+        .product__description {
             letter-spacing: 1px;
             margin-top: 3px;
         }
-        .product__name_header {
+        .product__title_header {
             margin-top: 6px;
         }
         .product__button {
@@ -21,7 +21,7 @@
         .product__price_header {
             margin-right: 6px;
         }
-        .product__wrap_price-button {
+        .product__wrap {
             margin-top: 23px;
             margin-bottom: 11px;
         }
@@ -29,14 +29,14 @@
 
     .slider-section {
         padding-bottom: 91px;
-        .container .buy-section__slider {
+        .container .slider {
             width: 348px;
             padding-top: 22px;
             padding-bottom: 0;
             margin-left: -5px;
         }
         .product {
-            .product__name {
+            .product__title {
                 margin-top: -1px;
             }
         }
@@ -60,15 +60,15 @@
             margin-top: -45px;
         }
         .product {
-            .product__name {
+            .product__title {
                 margin-top: -10px;
                 margin-bottom: 4px;
             }
-            .product__description_short {
+            .product__description {
                 margin: 0;
                 line-height: 27px;
             }
-            .product__wrap_price-button {
+            .product__wrap {
                 margin-top: 25px;
             }
             .product__button {
@@ -93,7 +93,7 @@
             p {
                 letter-spacing: -0.12px;
             }
-            .product__wrap_price-button {
+            .product__wrap {
                 margin: 38px 0 13px 0;
             }
         }
@@ -102,7 +102,7 @@
     .product__price {
         margin-right: 6px;
     }
-    .product__description_long {
+    .product__offer {
         line-height: 18px;
         mix-blend-mode: normal;
         opacity: 0.68;

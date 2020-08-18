@@ -51,12 +51,57 @@ $nav_height_m_big: 50px; //Высота навбара на экранах 573px
     @include button(white, black, 145px);
 }
 
-@mixin font {
-    font-weight: 0;
-    font-size: 0;
-    line-height: 0;
-    color: initial;
+@mixin font($font-weight, $font-size, $line-height) {
+    font-weight: $font-weight;
+    font-size: $font-size;
+    line-height: $line-height;
 }
 
-@mixin product {
+
+//Миксины для медиазапросов
+@mixin mobile {
+    @media (max-width: 768px - 1px) {
+        @content;
+    }
 }
+
+@mixin tablet {
+    @media (min-width: 768px) and (max-width: 1200px - 1px) {
+        @content;
+    }
+}
+
+@mixin tablet-s {
+    @media (min-width: 768px) and (max-width: 900px) {
+        @content;
+    }
+}
+
+@mixin tablet_desktop {
+    @media (min-width: 768px) and (max-width: 1440px) {
+        @content;
+    }
+}
+
+//Миксины для вспомогательных медиазапросов
+@mixin width-363px {
+    @media (max-width: 363px) {
+        @content;
+    }
+}
+
+@mixin width-573-767px {
+    @media (min-width: 573px) and (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin width-375px {
+    @media (max-width: 375px) {
+        @content;
+    }
+}
+
+
+
+
