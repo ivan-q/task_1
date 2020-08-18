@@ -1,4 +1,4 @@
-@import "_var_mix";
+@import "../../scss/_var_mix";
 
 .slider-section {
     padding-bottom: 175px;
@@ -20,7 +20,7 @@
         @include tablet {
             min-height: 800px;
         }
-        @include button(#f8f8f9, #030303, 110px);
+        @include button(#f8f8f9, #030303, 140px);
     }
     .product {
         @include tablet {

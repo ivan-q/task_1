@@ -15,12 +15,10 @@ $nav_height: 78px; //Меняем высоту навбара здесь
 $nav_height_m: 40px; //Высота навбара в мобильной версии
 $nav_height_m_big: 50px; //Высота навбара на экранах 573px-767px
 
-//высота пэддингов
+
 
 //Mixins
 
-//Делая @include в родительском блоке с кнопкой, в круглых скобках
-//указываем три параметра через запятую: цвет текста, цает фона, ширина
 @mixin button($text, $bg, $width) {
     .product-list__button,
     .product__button {
@@ -63,6 +61,7 @@ $nav_height_m_big: 50px; //Высота навбара на экранах 573px
     }
 }
 
+//Миксин для шрифта
 @mixin font($font-weight, $font-size, $line-height) {
     font-weight: $font-weight;
     font-size: $font-size;
@@ -94,7 +93,6 @@ $nav_height_m_big: 50px; //Высота навбара на экранах 573px
         @content;
     }
 }
-
 
 
 //Миксины для вспомогательных медиазапросов

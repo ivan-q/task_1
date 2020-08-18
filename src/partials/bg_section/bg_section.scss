@@ -1,4 +1,4 @@
-@import "_var_mix";
+@import "../../scss/_var_mix";
 
 //Секция с градиенным фоном
 .bg-wrap {
@@ -14,10 +14,10 @@
         }
     }
     &-img {
-        background-image: url(../img/Background/Group-18.png);
+        background-image: url(../../img/Background/Group-18.png);
         background-repeat: no-repeat;
         @include width-375px {
-            background-image: url(../img/Background/Group-18-m.png);
+            background-image: url(../../img/Background/Group-18-m.png);
         }
     }
 }

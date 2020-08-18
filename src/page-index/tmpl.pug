@@ -12,15 +12,15 @@ html(lang="en")
 
     body
         main.main
-            include ../partials/nav.pug
-            include ../partials/header_section.pug
-            include ../partials/slider_section.pug
-            include ../partials/bg_section.pug
-            include ../partials/simple_section.pug
-            include ../partials/product_list.pug
-            include ../partials/signup.pug
+            include ../partials/nav/nav.pug
+            include ../partials/header/header_section.pug
+            include ../partials/slider_section/slider_section.pug
+            include ../partials/bg_section/bg_section.pug
+            include ../partials/simple_section/simple_section.pug
+            include ../partials/product_list/product_list.pug
+            include ../partials/signup/signup.pug
 
-        include ../partials/footer.pug
+        include ../partials/footer/footer.pug
         script.
             const nav = document.querySelector('.nav__burger');
             nav.onclick = function () {

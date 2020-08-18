@@ -1,4 +1,4 @@
-@import "_var_mix";
+@import "../../scss/_var_mix";
 
 .nav {
     background-color: rgba(25, 23, 32, 0.47);
@@ -29,7 +29,7 @@
             height: $nav_height_m_big;
         }
         @include mobile {
-            justify-content: center;
+            justify-content: space-between;
             height: $nav_height_m;
         }
         @include tablet {
