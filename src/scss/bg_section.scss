@@ -1,0 +1,114 @@
+@import "_var_mix";
+
+//Секция с градиенным фоном
+.bg-wrap {
+    background: $gradient;
+    @include mobile {
+        background: $gradient_m;
+    }
+    max-width: 1440px;
+    margin: 0 auto;
+    .container {
+        @include width-375px {
+            margin: 0;
+        }
+    }
+    &-img {
+        background-image: url(../img/Background/Group-18.png);
+        background-repeat: no-repeat;
+        @include width-375px {
+            background-image: url(../img/Background/Group-18-m.png);
+        }
+    }
+}
+.bg-section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #fff;
+    height: 842px;
+    @include mobile {
+        flex-direction: column;
+        height: unset;
+        color: #f8f8f9;
+        padding-bottom: 37px;
+    }
+    @include tablet {
+        height: 650px;
+        max-height: 842px;
+        justify-content: space-between;
+    }
+    .product {
+        padding-left: 32px;
+        margin-top: 0;
+        @include mobile {
+            padding-left: 0;
+            margin-top: -50px;
+        }
+        @include width-375px {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        @include tablet {
+            padding-left: 0;
+            margin-right: 10px;
+            width: min-content;
+        }
+        .title {
+            text-transform: uppercase;
+            font-weight: bold;
+            @include mobile {
+                margin-top: -4px;
+                margin-bottom: 3px;
+            }
+            @include width-363px {
+                font-size: 30px;
+                margin-top: 6px;
+            }
+        }
+        .description:first-child {
+            @include mobile {
+                line-height: 20px;
+                margin: 0;
+                font-size: 16px;
+            }
+        }
+        .description {
+            @include mobile {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                margin: 14px 0;
+            }
+        }
+        .wrap {
+            @include mobile {
+                margin-top: 33px;
+            }
+        }
+    }
+    .price {
+        color: $product_price_big;
+        @include mobile {
+            line-height: 39px;
+        }
+    }
+    .offer {
+        @include mobile {
+            opacity: unset;
+            line-height: 18px;
+        }
+    }
+    img {
+        margin-left: -60px;
+        width: 48.6%;
+        @include mobile {
+            margin-left: unset;
+            margin-top: 6px;
+            width: 100%;
+        }
+        @include tablet {
+            margin-left: 0;
+        }
+    }
+}

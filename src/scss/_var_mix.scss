@@ -1,5 +1,6 @@
 //Variables
 $main_bg: #2b2835; //Цвет фона .header и footer
+$menu_m_bg: rgb(19, 104, 173); //Цвет выпадающего меню в nav в мобильной версии
 $signup_bg: #f8f8f9;
 $product_bg: #f8f8f9;
 $product_price: #9d8220;
@@ -51,6 +52,17 @@ $nav_height_m_big: 50px; //Высота навбара на экранах 573px
     @include button(white, black, 145px);
 }
 
+//Миксин для спрайтов
+@mixin nav_ico($width, $height, $obj-position) {
+    img {
+        width: $width;
+        height: $height;
+        object-fit: none;
+        flex-shrink: 0;
+        object-position: $obj-position;
+    }
+}
+
 @mixin font($font-weight, $font-size, $line-height) {
     font-weight: $font-weight;
     font-size: $font-size;
@@ -83,6 +95,8 @@ $nav_height_m_big: 50px; //Высота навбара на экранах 573px
     }
 }
 
+
+
 //Миксины для вспомогательных медиазапросов
 @mixin width-363px {
     @media (max-width: 363px) {
@@ -102,6 +116,56 @@ $nav_height_m_big: 50px; //Высота навбара на экранах 573px
     }
 }
 
+@mixin width-1366px {
+    @media (width: 1366px) {
+        @content;
+    }
+}
 
+@mixin tablet-l {
+    @media (min-width: 900px) and (max-width: 1200px - 1px) {
+        @content;
+    }
+}
 
+@mixin width-842-900px {
+    @media (min-width: 842px) and (max-width: 900px) {
+        @content;
+    }
+}
 
+@mixin width-958-1199px {
+    @media (min-width: 958px) and (max-width: 1200px - 1px) {
+        @content;
+    }
+}
+
+@mixin width-768-1050px {
+    @media (min-width: 768px) and (max-width: 1050px) {
+        @content;
+    }
+}
+
+@mixin width-768-944px {
+    @media (min-width: 768px) and (max-width: 944px) {
+        @content;
+    }
+}
+
+@mixin width-945px {
+    @media (min-width: 945px) {
+        @content;
+    }
+}
+
+@mixin width-1200-1400px {
+    @media (min-width: 1200px) and (max-width: 1400px) {
+        @content;
+    }
+}
+
+@mixin width-1440px {
+    @media all and (min-width: 1440px) {
+        @content;
+    }
+}

@@ -1,0 +1,66 @@
+@import "_var_mix";
+
+//product_list
+.product-list {
+    .container {
+        max-width: 1248px;
+        display: grid;
+        padding-top: 171px;
+        grid-template-rows: repeat(auto, 543px);
+        grid-template-columns: repeat(auto-fill, minmax(296px, 1fr));
+        grid-gap: 40px 20px;
+        @include mobile {
+            padding-top: initial;
+        }
+    }
+    &__item {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        justify-items: center;
+        align-items: end;
+        background: $product_bg;
+    }
+    &__wrap {
+        padding: 0 20px 36px 20px;
+    }
+    &__img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+        height: 265px;
+        img {
+            height: 100%;
+        }
+    }
+    &__title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 55px;
+        color: #2b2835;
+        @include mobile {
+            font-size: 40px;
+        }
+    }
+    &__price {
+        margin: 0;
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 30px;
+        color: $product_price;
+    }
+    &__description {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 21px;
+    }
+    &__wrap_price-button {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+        padding-top: 7px;
+    }
+}

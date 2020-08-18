@@ -1,0 +1,151 @@
+@import "_var_mix";
+
+.header {
+    min-height: 616px;
+    background-color: $main_bg;
+    @include tablet {
+        min-height: 390px;
+    }
+    @include mobile {
+        min-height: unset;
+        background-color: transparent;
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            min-height: 58vw;
+            background-color: $main_bg;
+        }
+    }
+    @include width-842-900px {
+        min-height: 420px;
+    }
+    @include width-958-1199px {
+        min-height: 450px;
+    }
+    @include width-1200-1400px {
+        min-height: 45vw;
+    }
+
+    .container {
+        flex-direction: column;
+        align-content: center;
+        @include tablet {
+            position: relative;
+        }
+    }
+    &__bg {
+        position: absolute;
+        left: -1%;
+        z-index: 1;
+        width: 59.4%;
+        @include mobile {
+            margin-left: 5.5%;
+            position: relative;
+            width: 100%;
+        }
+        @include width-573-767px {
+            max-width: 90%;
+        }
+        @include tablet {
+            left: -3%;
+            top: 0;
+        }
+        @include tablet-s {
+            width: 70%;
+            left: -6%;
+        }
+        @include width-1366px {
+            width: 54vw;
+        }
+        @include width-958-1199px {
+            width: 580px;
+        }
+    }
+    &__product {
+        align-self: flex-end;
+        position: relative;
+        z-index: 2;
+        padding-top: 199px;
+        color: #fff;
+        max-width: 510px;
+        margin-right: 4%;
+        @include mobile {
+            color: black;
+            padding-top: 18px;
+            @include button(black, #00b0ff, 146px);
+        }
+        @include width-573-767px {
+            align-self: flex-start;
+        }
+        @include tablet {
+            margin-right: 0;
+            max-width: min-content;
+            padding-top: 110px;
+        }
+        @include tablet-s {
+            margin-left: 15px;
+        }
+        @include width-1366px {
+            padding-top: 175px;
+        }
+        @include tablet-l {
+            max-width: 47%;
+        }
+        @include width-958-1199px {
+            padding-top: 140px;
+        }
+        @include width-1200-1400px {
+            margin-right: 0;
+        }
+
+        .button {
+            @include tablet-s {
+                width: 140px;
+            }
+        }
+        .offer {
+            color: $description;
+            @include mobile {
+                font-size: 13px;
+                color: black;
+            }
+        }
+        .wrap {
+            @include tablet {
+                margin-top: 26px;
+            }
+        }
+    }
+}
+
+@media (width: 1366px) {
+    section.header {
+        min-height: 39vw;
+    }
+}
+
+//Переопределение стилей для больших экранов, костыль
+
+@media all and (min-width: 1688px) {
+    .header__bg {
+        margin-left: 10%;
+    }
+}
+@media all and (min-width: 2100px) {
+    .header__bg {
+        margin-left: 20%;
+    }
+}
+@media all and (min-width: 2600px) {
+    .header__bg {
+        margin-left: 26%;
+    }
+}
+@media all and (min-width: 3100px) {
+    .header__bg {
+        margin-left: 30%;
+    }
+}

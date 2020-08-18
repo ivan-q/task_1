@@ -1,6 +1,6 @@
 @import "_var_mix";
 
-footer {
+.footer {
     margin-top: 63px;
     background: $main_bg;
     width: 100vw;
@@ -17,18 +17,47 @@ footer {
             padding-top: 30px;
         }
     }
-}
-
-.footer__list {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    @include mobile {
-        flex-direction: column;
-        text-align: center;
-        width: 100%;
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        @include mobile {
+            flex-direction: column;
+            text-align: center;
+            width: 100%;
+        }
+        @include width-768-944px {
+            flex-wrap: wrap;
+            width: 80%;
+        }
+        @include width-945px {
+            flex-wrap: nowrap;
+            width: 67%;
+        }
+        
+        li {
+            list-style: none;
+            padding-bottom: 0.7em;
+            color: #fff;
+            a {
+                color: #fff;
+            }
+            a:first-child {
+                opacity: initial;
+            }
+            li:nth-child(1) {
+                @include font(600, 24px, 31px);
+                @include mobile {
+                    font-size: 20px;
+                }
+                @include width-768-1050px {
+                    font-size: 20px;
+                }
+            }
+        }
+        
     }
-    .footer__name {
+    &__name {
         @include mobile {
             font-size: 20px;
             padding-top: 5px;
@@ -38,60 +67,74 @@ footer {
             padding-bottom: 0;
         }
     }
-    li {
-        list-style: none;
-        padding-bottom: 0.7em;
-        color: #fff;
-        a {
-            color: #fff;
-        }
-        a:first-child {
-            opacity: initial;
-        }
-        li:nth-child(1) {
-            @include font(600, 24px, 31px);
-        }
-    }
-    ul li:not(:first-child) { //Пункты списков кроме заголовка
+    &__link {
+        //Пункты списков кроме заголовка
         mix-blend-mode: normal;
         opacity: 0.39;
-    }
-}
-
-.footer__logo {
-    text-align: center;
-    @include mobile {
-        margin-bottom: 35px;
-    }
-}
-
-.footer___follow {
-    display: flex;
-    flex-direction: column;
-    @include mobile {
-        text-align: center;
-        padding-top: 12px;
-        padding-bottom: 40px;
-    }
-    > a {
-        @include font(600, 24px, 31px);
-        color: white;
-    }
-    h2 {
-        font-size: 24px;
-        line-height: 31px;
-        color: white;
-        @include mobile {
-            font-size: 20px;
+        a {
+            @include width-768-1050px {
+                font-size: 12px;
+            }
         }
     }
-    .footer___socials {
+    &__elem_open {
+        a {
+            @include width-768-1050px {
+                font-size: 12px;
+            }
+        }
+    }
+    &__logo {
+        text-align: center;
+        @include mobile {
+            margin-bottom: 35px;
+        }
+    }
+    &___follow {
+        display: flex;
+        flex-direction: column;
+        @include mobile {
+            text-align: center;
+            padding-top: 12px;
+            padding-bottom: 40px;
+        }
+        @include width-768-944px {
+            width: 100%;
+            padding-top: 40px;
+            align-items: center;
+        }
+        @include width-945px {
+            width: initial;
+        }
+        > a {
+            @include font(600, 24px, 31px);
+            color: white;
+        }
+        h2 {
+            font-size: 24px;
+            line-height: 31px;
+            color: white;
+            @include mobile {
+                font-size: 20px;
+            }
+            @include width-768-1050px {
+                font-size: 20px;
+            }
+            @include width-768-944px {
+                text-align: center;
+            }
+        }
+    }
+    &___socials {
         padding-left: 0;
         display: flex;
         padding-top: 14px;
         width: 170px;
         @include mobile {
             padding-top: 19px;
+        }
+        @include width-768-944px {
+            width: min-content;
         }
         a {
             padding: 0;
@@ -109,24 +152,34 @@ footer {
             background: #fff;
             border-radius: 50px;
             margin: auto;
+            @include width-768-1050px {
+                width: 28px;
+                height: 28px;
+                @include font(normal, 18px, 28px);
+            }
         }
     }
+    &__copyright {
+        text-align: center;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        color: #fff;
+        mix-blend-mode: normal;
+        opacity: 0.31;
+        padding-top: 83px;
+        padding-bottom: 21px;
+        @include mobile {
+            display: none;
+        }
+        @include width-768-944px {
+            padding-top: 50px;
+        }
+    }
+
 }
 
-.footer__copyright {
-    text-align: center;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 15px;
-    color: #fff;
-    mix-blend-mode: normal;
-    opacity: 0.31;
-    padding-top: 83px;
-    padding-bottom: 21px;
-    @include mobile {
-        display: none;
-    }
-}
+
 
 //Также mobile
 @media (max-width: 768px - 1px) {
@@ -144,7 +197,7 @@ footer {
                 border-bottom: 0.5px solid #000;
             }
         }
-        &__link {
+        .closed {
             display: none;
         }
     }

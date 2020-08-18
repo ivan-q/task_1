@@ -36,7 +36,7 @@ main > * {
     }
 }
 
-//Стили для блока .product
+//Общие стили для блока .product
 .product {
     margin-top: 239px;
     @include mobile {
@@ -67,6 +67,13 @@ main > * {
             @include font(bold, 32px, 35px);
             margin-bottom: 0;
         }
+        @include tablet {
+            font-size: 30px;
+            margin-bottom: 0;
+        }
+        @include tablet-s {
+            font-size: 24px;
+        }
     }
     &__wrap {
         display: flex;
@@ -93,6 +100,9 @@ main > * {
             font-size: 32px;
             margin-right: 14px;
         }
+        @include tablet-s {
+            margin-right: 25px;
+        }
     }
     &__offer {
         @include font(500, 13px, initial);
@@ -100,355 +110,6 @@ main > * {
             font-size: 13px;
             opacity: 0.68;
         }
-    }
-    .header &__offer {
-        color: $description;
-        @include mobile {
-            font-size: 13px;
-            color: black;
-        }
-    }
-}
-
-//header_section
-.header {
-    min-height: 616px;
-    background-color: $main_bg;
-    .container {
-        flex-direction: column;
-        align-content: center;
-    }
-    @include mobile {
-        min-height: unset;
-        background-color: transparent;
-        &:after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            min-height: 58vw;
-            background-color: $main_bg;
-        }
-    }
-    &__bg {
-        position: absolute;
-        left: -1%;
-        z-index: 1;
-        width: 59.4%;
-        @include mobile {
-            margin-left: 5.5%;
-            position: relative;
-            width: 100%;
-        }
-        @include width-573-767px {
-            max-width: 90%;
-        }
-    }
-    &__product {
-        align-self: flex-end;
-        position: relative;
-        z-index: 2;
-        padding-top: 199px;
-        color: #fff;
-        max-width: 510px;
-        margin-right: 4%;
-        @include mobile {
-            color: black;
-            padding-top: 18px;
-            @include button(black, #00b0ff, 146px);
-        }
-        @include width-573-767px {
-            align-self: flex-start;
-        }
-    }
-}
-
-//slider_section
-.slider-section {
-    padding-bottom: 175px;
-    @include mobile {
-        padding-bottom: 100px;
-    }
-    .container {
-        justify-content: space-between;
-        @include mobile {
-            flex-direction: column-reverse;
-            justify-content: flex-start;
-            width: initial;
-            align-items: center;
-        }
-        @include button(#f8f8f9, #030303, 146px);
-    }
-    .slider {
-        margin-right: -4%;
-        @include mobile {
-            width: initial;
-            margin-right: 0;
-            padding: 20px 0;
-        }
-        img {
-            max-width: 755px;
-            @include mobile {
-                width: 100%;
-                margin-right: 0;
-            }
-        }
-        .pagination {
-            @include mobile {
-                display: none;
-            }
-        }
-    }
-}
-
-//Секция с градиенным фоном
-.bg-wrap {
-    background: $gradient;
-    @include mobile {
-        background: $gradient_m;
-    }
-    max-width: 1440px;
-    margin: 0 auto;
-    .container {
-       @include width-375px {
-        margin: 0;
-       }
-    }
-    &-img {
-        background-image: url(../img/Background/Group-18.png);
-        background-repeat: no-repeat;
-        @include width-375px {
-            background-image: url(../img/Background/Group-18-m.png);
-        }
-    }
-}
-.bg-section {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    color: #fff;
-    height: 842px;
-    @include mobile {
-        flex-direction: column;
-        height: unset;
-        color: #f8f8f9;
-        padding-bottom: 37px;
-    }
-    .product {
-        padding-left: 32px;
-        margin-top: 0;
-        @include mobile {
-            padding-left: 0;
-            margin-top: -50px;
-        }
-        @include width-375px {
-            margin-left: 20px;
-            margin-right: 20px;
-        }
-        .title {
-            text-transform: uppercase;
-            font-weight: bold;
-            @include mobile {
-                margin-top: -4px;
-                margin-bottom: 3px;
-            }
-            @include width-363px {
-                font-size: 30px;
-                margin-top: 6px;
-            }
-        }
-        .description:first-child {
-            @include mobile {
-                line-height: 20px;
-                margin: 0;
-                font-size: 16px;
-            }
-        }
-        .description {
-            @include mobile {
-                font-style: normal;
-                font-weight: normal;
-                font-size: 14px;
-                margin: 14px 0;
-            }
-        }
-        .wrap {
-            @include mobile {
-                margin-top: 33px;
-            }
-        }
-    }
-    .price {
-        color: $product_price_big;
-        @include mobile {
-            line-height: 39px;
-        }
-    }
-    .offer {
-        @include mobile {
-            opacity: unset;
-            line-height: 18px;
-        }
-    }
-    img {
-        margin-left: -60px;
-        width: 48.6%;
-        @include mobile {
-            margin-left: unset;
-            margin-top: 6px;
-            width: 100%;
-        }
-    }
-}
-
-
-//Секция simple_section
-.simple_wrap {
-    margin-top: 171px;
-    background: $grey_bg;
-    @include mobile {
-        margin-top: 40px;
-        padding-bottom: 36px;
-        background: none;
-    }
-    .container {
-        @include mobile {
-            align-items: initial;
-        }
-    }
-}
-.simple {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    @include mobile {
-        flex-direction: column-reverse;
-        align-items: initial;
-    }
-    .product {
-        margin-top: 0;
-        h2 {
-            @include mobile {
-                color: #2b2835;
-                margin-top: 12px;
-                text-transform: uppercase;
-            }
-        }
-        > p:first-child {
-            @include mobile {
-                font-size: 16px;
-                line-height: 20px;
-                color: #2b2835;
-            }
-        }
-        > p {
-            @include mobile {
-                font-size: 14px;
-                line-height: 27px;
-                color: #030303;
-            }
-        }
-        > p:last-child {
-            @include mobile {
-                font-weight: 500;
-                font-size: 13px;
-                line-height: 18px;
-                color: #6a6a6a;
-            }
-        }
-        &__wrap {
-            @include mobile {
-                margin: 42px 0 15px 0;
-                @include button(#f8f8f9, #030303, 146px);
-            }
-        }
-        &__price {
-            @include mobile {
-                line-height: 39px;
-                color: #000000;
-            }
-        }
-    }
-    .product__img {
-        padding-top: 38px;
-        padding-bottom: 67px;
-        margin-right: -10%;
-        @include mobile {
-            margin-right: 0;
-            padding: 40px 0;
-        }
-        img {
-            width: 51.32vw;
-            @include mobile {
-                width: 100%;
-            }
-        }
-    }
-}
-
-//product_list
-.product-list {
-    .container {
-        max-width: 1248px;
-        display: grid;
-        padding-top: 171px;
-        grid-template-rows: repeat(auto, 543px);
-        grid-template-columns: repeat(auto-fill, minmax(296px, 1fr));
-        grid-gap: 40px 20px;
-        @include mobile {
-            padding-top: initial;
-        }
-    }
-    &__item {
-        display: grid;
-        grid-template-rows: auto 1fr;
-        justify-items: center;
-        align-items: end;
-        background: $product_bg;
-    }
-    &__wrap {
-        padding: 0 20px 36px 20px;
-    }
-    &__img {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 20px;
-        height: 265px;
-        img {
-            height: 100%;
-        }
-    }
-    &__title {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 36px;
-        line-height: 55px;
-        color: #2b2835;
-        @include mobile {
-            font-size: 40px;
-        }
-    }
-    &__price {
-        margin: 0;
-        font-weight: 600;
-        font-size: 25px;
-        line-height: 30px;
-        color: $product_price;
-    }
-    &__description {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 21px;
-    }
-    &__wrap_price-button {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin: 0;
-        padding-top: 7px;
     }
 }
 

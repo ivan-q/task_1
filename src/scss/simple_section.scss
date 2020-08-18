@@ -1,0 +1,95 @@
+@import "_var_mix";
+
+//Секция simple_section
+.simple_wrap {
+    margin-top: 171px;
+    background: $grey_bg;
+    @include mobile {
+        margin-top: 40px;
+        padding-bottom: 36px;
+        background: none;
+    }
+    .container {
+        @include mobile {
+            align-items: initial;
+        }
+    }
+}
+.simple {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include mobile {
+        flex-direction: column-reverse;
+        align-items: initial;
+    }
+    .product {
+        margin-top: 0;
+        h2 {
+            @include mobile {
+                color: #2b2835;
+                margin-top: 12px;
+                text-transform: uppercase;
+            }
+        }
+        > p:first-child {
+            @include mobile {
+                font-size: 16px;
+                line-height: 20px;
+                color: #2b2835;
+            }
+        }
+        > p {
+            @include mobile {
+                font-size: 14px;
+                line-height: 27px;
+                color: #030303;
+            }
+        }
+        > p:last-child {
+            @include mobile {
+                font-weight: 500;
+                font-size: 13px;
+                line-height: 18px;
+                color: #6a6a6a;
+            }
+        }
+        &__wrap {
+            @include mobile {
+                margin: 42px 0 15px 0;
+                @include button(#f8f8f9, #030303, 146px);
+            }
+        }
+        &__price {
+            @include mobile {
+                line-height: 39px;
+                color: #000000;
+            }
+        }
+    }
+    .simple__img {
+        padding-top: 38px;
+        padding-bottom: 67px;
+        margin-right: -10%;
+        @include mobile {
+            margin-right: 0;
+            padding: 40px 0;
+        }
+        @include tablet {
+            margin-right: 0;
+        }
+        img {
+            width: 51.32vw;
+            @include mobile {
+                width: 100%;
+            }
+            @include tablet {
+                width: 60vw;
+                margin-right: -50px;
+            }
+            @include width-1440px {
+                width: initial;
+            }
+        }
+    }
+}

@@ -1,179 +1,178 @@
 @import "_var_mix";
 
-nav {
+.nav {
     background-color: rgba(25, 23, 32, 0.47);
     z-index: 10;
     position: relative;
-    .container {
-        justify-content: space-between;
-        flex-wrap: wrap;
+    
+    //Любой элемент с классом .header, идущий после .nav, будет обладать следующими свойствами:
+    & + .header {
+        z-index: 1;
+        margin-top: -$nav_height;
+        position: relative;
+        @include width-573-767px {
+            margin-top: -$nav_height_m_big;
+        }
+        @include mobile {
+            margin-top: -$nav_height_m;
+        }
     }
-}
-//Любой элемент с классом .header, идущий после nav, будет обладать следующими свойствами:
-nav + .header {
-    z-index: 1;
-    margin-top: -$nav_height;
-    position: relative;
-    @include width-573-767px {
-        margin-top: -$nav_height_m_big;
-    }
-}
 
-.nav__list {
-    height: $nav_height;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    @include width-573-767px {
-        height: $nav_height_m_big;
-    }
-    ul {
+
+    &__list {
+        height: $nav_height;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-evenly;
         align-items: center;
-        width: calc(100% - 254px);
-    }
-}
-
-.nav__logo {
-    a {
-        display: flex;
-    }
-}
-
-.nav__item {
-    a {
-        font-weight: 500;
-        font-size: 15px;
-        line-height: 18px;
-        color: white;
-        text-transform: uppercase;
-    }
-}
-
-.nav__icons {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 180px;
-    padding-left: 24px;
-    img:first-child {
-        height: 29px;
-    }
-    img:hover {
-        transform: scale(1.1);
-    }
-}
-
-@mixin nav_ico($width, $height, $obj-position) {
-    img {
-        width: $width;
-        height: $height;
-        object-fit: none;
-        flex-shrink: 0;
-        object-position: $obj-position;
-    }
-}
-.nav__profile {
-    @include nav_ico(27px, 27px, 0 0);
-}
-.nav__cart {
-    @include nav_ico(27px, 25px, 0 0);
-}
-
-@media (max-width: 768px - 1px) {
-    .nav__icons img:first-child {
-        height: 21px;
-    }
-    .nav__profile {
-        @include nav_ico(22px, 22px, -27px 0);
-    }
-    .nav__cart {
-        @include nav_ico(22px, 21px, -27px 0);
-    }
-    nav + .header {
-        margin-top: -$nav_height_m;
-    }
-    .nav__list {
-        justify-content: center;
-        height: $nav_height_m;
-        .nav__burger {
-            display: initial;
+        @include width-573-767px {
+            height: $nav_height_m_big;
         }
-        .nav__logo {
+        @include mobile {
+            justify-content: center;
+            height: $nav_height_m;
+        }
+        @include tablet {
+            flex-wrap: nowrap;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: calc(100% - 254px);
+            @include mobile {
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                position: absolute;
+                background-color: $menu_m_bg;
+                min-width: 411px;
+                height: 100vh;
+                font-size: 50px;
+                padding: 5px 20px 20px 60px;
+                top: 40px;
+                left: 0;
+                display: none;
+            }
+            @include tablet-l {
+                justify-content: space-around;
+            }
+        }
+    }
+
+    &__logo {
+        @include mobile {
             position: absolute;
             left: 56px;
-            img {
+        }
+        a {
+            display: flex;
+        }
+        img {
+            @include mobile {
                 width: 26.93px;
             }
-        }
-        ul {
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start;
-            position: absolute;
-            background-color: rgb(19, 104, 173);
-            min-width: 411px;
-            height: 100vh;
-            font-size: 50px;
-            padding: 20px;
-            padding-top: 5px;
-            top: 40px;
-            left: 0;
-            display: none;
-            li:last-child {
-                margin-bottom: 0;
+            @include tablet-s {
+                width: 36px;
             }
         }
-        .open {
-            display: initial;
+    }
+
+    &__item {
+        a {
+            @include font(500, 15px, 18px);
+            color: white;
+            text-transform: uppercase;
+            @include tablet-s {
+                font-size: 12px;
+            }
         }
-        .nav__icons {
+    }
+
+    &__icons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        width: 180px;
+        padding-left: 24px;
+        @include mobile {
             width: initial;
             padding: 0;
             gap: 20px;
-            a:first-child {
-                display: none;
+        }
+        @include tablet-s {
+            width: 143px;
+        }
+        @include tablet-l {
+            width: 17%;
+        }
+        img:first-child {
+            height: 29px;
+            @include mobile {
+                height: 21px;
             }
-            .nav__cart::after {
-                top: -3px;
-                right: -6px;
+        }
+        img:hover {
+            transform: scale(1.1);
+        }
+        a:first-child {
+            @include mobile {
+                display: none;
             }
         }
     }
-}
 
-.nav__burger,
-.nav__item_m {
-    display: none;
-}
-
-.nav__burger {
-    cursor: pointer;
-    div {
-        background-color: #fff;
-        width: 16px;
-        height: 2px;
+    &__profile {
+        @include nav_ico(27px, 27px, 0 0); // Ширина, высота, object-position
+        @include mobile {
+            @include nav_ico(22px, 22px, -27px 0); // Ширина, высота, object-position
+        }
     }
-    div:not(:last-child) {
-        margin-bottom: 3px;
+    &__cart {
+        @include nav_ico(27px, 25px, 0 0); // Ширина, высота, object-position
+        @include mobile {
+            @include nav_ico(22px, 21px, -27px 0); // Ширина, высота, object-position
+        }
     }
-}
 
-.nav__icons {
-    position: relative;
-}
-.nav__cart::after {
-    content: "3";
-    text-align: center;
-    line-height: 12px;
-    font-weight: 500;
-    font-size: 9px;
-    position: absolute;
-    top: -1px;
-    right: -4px;
-    width: 12px;
-    height: 12px;
-    border-radius: 50px;
-    background-color: #ff1744;
+    &__burger {
+        display: none;
+        cursor: pointer;
+        div {
+            background-color: #fff;
+            width: 16px;
+            height: 2px;
+        }
+        @include mobile {
+            display: initial;
+        }
+        div:not(:last-child) {
+            margin-bottom: 3px;
+        }
+    }
+
+    //Кружок возле корзины с количеством покупок
+    &__cart::after {
+        content: "3";
+        text-align: center;
+        @include font(500, 9px, 12px);
+        position: absolute;
+        top: -1px;
+        right: -4px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50px;
+        background-color: #ff1744;
+        @include mobile {
+            top: -3px;
+            right: -6px;
+        }
+    }
+    .open {
+        @include mobile {
+            display: initial;
+        }
+    }
 }
