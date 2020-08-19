@@ -15,10 +15,11 @@ $nav_height: 78px; //Меняем высоту навбара здесь
 $nav_height_m: 40px; //Высота навбара в мобильной версии
 $nav_height_m_big: 50px; //Высота навбара на экранах 573px-767px
 
-
-
 //Mixins
 
+
+
+//Параметры кнопок
 @mixin button($text, $bg, $width) {
     .product-list__button,
     .product__button {
@@ -30,13 +31,26 @@ $nav_height_m_big: 50px; //Высота навбара на экранах 573px
         background: $bg;
         width: $width;
         height: 41px;
-        line-height: 41px; //Вывести высоту в одну переменную, разобраться
+        line-height: 41px;
+        &:hover {
+            background: #00b0ff;
+        }
     }
 }
-//Здесь меняем цвет и ширину кнопок на сайте (за исключением мобильной версии)
+
 .header {
     @include button(black, #00b0ff, 170px);
+    .product__button:hover {
+        background: black;
+        color: white;
+    }
 }
+
+.signup a:hover {
+    background: black;
+    color: white;
+}
+
 .slider-section {
     @include button(white, black, 110px);
 }
@@ -49,6 +63,11 @@ $nav_height_m_big: 50px; //Высота навбара на экранах 573px
 .product-list {
     @include button(white, black, 145px);
 }
+
+
+
+
+
 
 //Миксин для спрайтов
 @mixin nav_ico($width, $height, $obj-position) {
@@ -110,6 +129,12 @@ $nav_height_m_big: 50px; //Высота навбара на экранах 573px
 
 @mixin width-375px {
     @media (max-width: 375px) {
+        @content;
+    }
+}
+
+@mixin not-mobile {
+    @media (min-width: 768px) {
         @content;
     }
 }

@@ -47,7 +47,7 @@
                 align-items: flex-start;
                 position: absolute;
                 background-color: $menu_m_bg;
-                min-width: 411px;
+                width: 100vw;
                 height: 100vh;
                 font-size: 50px;
                 padding: 5px 20px 20px 60px;
@@ -87,6 +87,12 @@
             @include tablet-s {
                 font-size: 12px;
             }
+        }
+    }
+
+    &__menu {
+        a:hover {
+            border-bottom: 1px solid white;
         }
     }
 

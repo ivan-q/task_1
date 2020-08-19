@@ -8,7 +8,6 @@ require('../scss/main.scss')
 require('../partials/nav/nav.scss') //Navigation bar
 require('../partials/header/header.scss')
 require('../partials/slider_section/slider_section.scss')
-require('../partials/color_change/color_change.scss')
 require('../partials/bg_section/bg_section.scss')
 require('../partials/simple_section/simple_section.scss')
 require('../partials/product_list/product_list.scss')

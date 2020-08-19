@@ -1,14 +1,25 @@
 section.slider-section
     .container
         article.product
+
             p.product__description Portable Wireless Speaker
             h2.product__title Beats Pill
                 sup.plus-sign +
-            include ../color_change/color_change.pug
+
+            .color-change
+                h2.color-change__h2 Available Colors
+                p.color-change__p Find your Color
+                .color-change__circles
+                    div
+                    div
+                    div
+
             .product__wrap
                 p.product__price $299.95
                 a.product__button(href='#') Buy now
+
             p.product__offer $60 Apple Music gift card with purchase of select Beats products.*
+            
         article.slider
             img(src='../src/img/Bitmap-1.png' alt='slider')
             .pagination
