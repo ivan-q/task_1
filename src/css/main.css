@@ -5,29 +5,10 @@ body {
 
 body {
   font-weight: 400;
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-
-/* @font-face {
-  font-family: 'Montserrat-Regular';
-  src: url(../fonts/Montserrat-Regular.ttf);
-}
-@font-face {
-  font-family: 'Montserrat-Medium';
-  src: url(../fonts/Montserrat-Medium.ttf);
-}
-@font-face {
-  font-family: 'Montserrat-SemiBold';
-  src: url(../fonts/Montserrat-SemiBold.ttf);
-}
-@font-face {
-  font-family: 'Montserrat-Bold';
-  src: url(../fonts/Montserrat-Bold.ttf);
-} */
 
 a {
   text-decoration: none;

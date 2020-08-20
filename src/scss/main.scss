@@ -10,7 +10,8 @@ html {
 }
 
 body {
-    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-family: "Montserrat-Regular", Arial, Helvetica, sans-serif;
+    // font-family: "Dancing Script";
     font-size: 14px;
 }
 
@@ -129,3 +130,13 @@ main > * {
         @include font(500, 40px, 55px);
     }
 }
+
+
+
+
+
+
+
+
+
+

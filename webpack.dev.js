@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+// const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 
@@ -31,6 +32,7 @@ module.exports = {
           presets: ['@babel/preset-env']
         }
       },
+
       { //sass
         test: /\.(css|scss|sass)(\?.*)?$/i,
         use: [
@@ -40,10 +42,18 @@ module.exports = {
           // Please note we are not running postcss here
         ]
       },
+
       { //pug
-        test: /\.pug$/,
+        test: /\.(pug|jade)$/,
         use: 'pug-loader'
       },
+
+      {
+        // Fonts
+        test: /\.(woff|woff2|eot|otf|ttf)$/,
+        use: 'file-loader'
+      },
+
       { // Load all images as base64 encoding if they are smaller than 8192 bytes
         test: /\.(png|jpe?g|gif|svg)$/i,
         use: [
@@ -58,6 +68,7 @@ module.exports = {
           }
         ]
       }
+
     ]
   },
 
@@ -85,5 +96,8 @@ module.exports = {
     // new MiniCssExtractPlugin({
     //   filename: "[name].css",
     // })
+    
+    
+  
   ]
 }
