@@ -16,61 +16,13 @@ $nav_height: 78px; //Меняем высоту навбара здесь
 $nav_height_m: 40px; //Высота навбара в мобильной версии
 $nav_height_m_big: 50px; //Высота навбара на экранах 573px-767px
 
+
+
+
+
+
+
 //Mixins
-
-
-
-
-
-
-
-//Параметры кнопок
-@mixin button($text, $bg, $width) {
-    .product-list__button,
-    .product__button {
-        border-radius: 100px;
-        text-align: center;
-        font-weight: 600;
-        text-transform: uppercase;
-        color: $text;
-        background: $bg;
-        width: $width;
-        height: 41px;
-        line-height: 41px;
-        &:hover {
-            background: #00b0ff;
-        }
-    }
-}
-
-.header {
-    @include button(black, #00b0ff, 170px);
-    .product__button:hover {
-        background: black;
-        color: white;
-    }
-}
-
-.signup a:hover {
-    background: black;
-    color: white;
-}
-
-.slider-section {
-    @include button(white, black, 110px);
-}
-.bg-section {
-    @include button(white, black, 170px);
-}
-.simple {
-    @include button(white, black, 110px);
-}
-.product-list {
-    @include button(white, black, 145px);
-}
-
-
-
 
 //Миксин для спрайтов
 @mixin nav_ico($width, $height, $obj-position) {
@@ -86,8 +38,8 @@ $nav_height_m_big: 50px; //Высота навбара на экранах 573px
 
 
 //Миксин для шрифта
-@mixin font($font-weight, $font-size, $line-height) {
-    font-weight: $font-weight;
+@mixin font($font-family, $font-size, $line-height) {
+    font-family: $font-family;
     font-size: $font-size;
     line-height: $line-height;
 }
@@ -95,6 +47,7 @@ $nav_height_m_big: 50px; //Высота навбара на экранах 573px
 //      Montserrat-Medium     500
 //      Montserrat-SemiBold   600
 //      Montserrat-Bold       700
+
 
 
 
@@ -124,6 +77,7 @@ $nav_height_m_big: 50px; //Высота навбара на экранах 573px
         @content;
     }
 }
+
 
 
 
@@ -210,3 +164,56 @@ $nav_height_m_big: 50px; //Высота навбара на экранах 573px
 
 
 
+//Миксин для кнопок
+@mixin button($text, $bg, $width) {
+    .product-list__button,
+    .product__button {
+        border-radius: 100px;
+        text-align: center;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: $text;
+        background: $bg;
+        width: $width;
+        height: 41px;
+        line-height: 41px;
+        &:hover {
+            background: #00b0ff;
+        }
+    }
+}
+
+.header {
+    @include button(black, #00b0ff, 170px);
+    @include mobile {
+        @include button(black, #00b0ff, 146px); //Параметры кнопки в мобильной версии
+    }
+    .product__button:hover {
+        background: black;
+        color: white;
+    }
+}
+
+.signup a:hover {
+    background: black;
+    color: white;
+}
+
+.slider-section {
+    @include button(white, black, 110px);
+    @include mobile {
+        @include button(#f8f8f9, #030303, 140px); //Параметры кнопки в мобильной версии
+    }
+}
+.bg-section {
+    @include button(white, black, 170px);
+}
+.simple {
+    @include button(white, black, 110px);
+    @include mobile {
+        @include button(#f8f8f9, #030303, 146px); //Параметры кнопки в мобильной версии
+    }
+}
+.product-list {
+    @include button(white, black, 145px);
+}

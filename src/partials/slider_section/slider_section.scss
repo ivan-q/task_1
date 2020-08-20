@@ -22,7 +22,6 @@
         @include tablet {
             min-height: 800px;
         }
-        @include button(#f8f8f9, #030303, 140px);
     }
 
     .product {

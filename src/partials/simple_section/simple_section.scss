@@ -26,6 +26,7 @@
     .product {
         margin-top: 0;
         h2 {
+            font-family: "Montserrat-Bold", Arial, Helvetica, sans-serif;
             @include mobile {
                 color: #2b2835;
                 margin-top: 12px;
@@ -57,7 +58,6 @@
         &__wrap {
             @include mobile {
                 margin: 42px 0 15px 0;
-                @include button(#f8f8f9, #030303, 146px);
             }
         }
         &__price {

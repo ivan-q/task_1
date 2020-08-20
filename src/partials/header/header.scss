@@ -75,7 +75,6 @@
         @include mobile {
             color: black;
             padding-top: 18px;
-            @include button(black, #00b0ff, 146px);
         }
         @include width-573-767px {
             align-self: flex-start;

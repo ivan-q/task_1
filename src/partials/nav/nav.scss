@@ -81,7 +81,7 @@
 
     &__item {
         a {
-            @include font(500, 15px, 18px);
+            @include font("Montserrat-Regular", 15px, 18px);
             color: white;
             text-transform: uppercase;
             @include tablet-s {
@@ -163,7 +163,7 @@
     &__cart::after {
         content: "3";
         text-align: center;
-        @include font(500, 9px, 12px);
+        @include font("Montserrat-Medium", 9px, 12px);
         position: absolute;
         top: -1px;
         right: -4px;

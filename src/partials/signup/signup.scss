@@ -29,7 +29,7 @@
     }
     h2 {
         text-align: center;
-        @include font(bold, 50px, 55px);
+        @include font("Montserrat-Bold", 50px, 55px);
         color: #2b2835;
         padding-top: 52px;
         @include mobile {
@@ -71,7 +71,7 @@
     a {
         text-align: center;
         text-transform: uppercase;
-        @include font(600, 14px, 17px);
+        @include font("Montserrat-SemiBold", 14px, 17px);
         color: #fff;
         background: #00b0ff;
         border-radius: 50px;

@@ -11,7 +11,6 @@ html {
 
 body {
     font-family: "Montserrat-Regular", Arial, Helvetica, sans-serif;
-    // font-family: "Dancing Script";
     font-size: 14px;
 }
 
@@ -45,27 +44,27 @@ main > * {
         align-self: flex-start;
     }
     &__description {
-        @include font(500, 16px, initial);
+        @include font("Montserrat-Medium", 16px, initial);
         margin-bottom: 13px;
         @include mobile {
             margin-bottom: 0;
         }
     }
     &__title {
-        @include font(bold, 50px, initial);
+        @include font("Montserrat-Bold", 50px, initial);
         margin-left: -3px;
         margin-bottom: 20px;
         @include mobile {
-            @include font(bold, 32px, 55px);
+            @include font("Montserrat-Bold", 32px, 55px);
             margin: 3px 0 0 0;
         }
     }
     &__title_header {
-        @include font(bold, 40px, initial);
+        @include font("Montserrat-Bold", 40px, 43px);
         margin-bottom: 40px;
         margin-top: 0px;
         @include mobile {
-            @include font(bold, 32px, 35px);
+            @include font("Montserrat-Bold", 32px, 35px);
             margin-bottom: 0;
         }
         @include tablet {
@@ -106,7 +105,7 @@ main > * {
         }
     }
     &__offer {
-        @include font(500, 13px, initial);
+        @include font("Montserrat-Medium", 13px, initial);
         @include mobile {
             font-size: 13px;
             opacity: 0.68;
@@ -127,7 +126,7 @@ main > * {
         top: -0.55rem;
         margin-left: 0;
         font-style: normal;
-        @include font(500, 40px, 55px);
+        @include font("Montserrat-Medium", 40px, 55px);
     }
 }
 
