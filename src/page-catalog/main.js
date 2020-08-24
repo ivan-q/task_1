@@ -1,9 +1,9 @@
 import { Bar } from '../js/bar.es6'
 const { Foo } = require('../js/foo.cjs')
 require('normalize.css/normalize.css')
+require('../scss/_var_mix.scss')
 require('../css/main.css')
 require('./page.css')
-require('../scss/_var_mix.scss')
 require('../scss/main.scss')
 require('../partials/nav/nav.scss') //Navigation bar
 require('../partials/header/header.scss')
@@ -17,7 +17,7 @@ require('../scss/pixel_perfect_1440px.scss')
 require('../scss/pixel_perfect_375px.scss')
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('DOMContentLoaded', 'page-index')
+  console.log('DOMContentLoaded', 'page-catalog')
 })
 
 window.Foo = Foo.instance()
@@ -25,5 +25,3 @@ window.Bar = Bar()
 
 console.log(window.Foo.getValue())
 console.log(window.Bar)
-
-

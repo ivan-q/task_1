@@ -12,11 +12,10 @@ module.exports = {
   // https://webpack.js.org/concepts/entry-points/#multi-page-application
   entry: {
     index: './src/page-index/main.js',
-    // about: './src/page-about/main.js',
-    // contacts: './src/page-contacts/main.js'
+    catalog: './src/page-catalog/main.js',
+    product: './src/page-product/main.js'
   },
 
-  
   devServer: {
     port: 4040,
     writeToDisk: false
@@ -43,7 +42,8 @@ module.exports = {
         ]
       },
 
-      { //pug
+      { 
+        //pug
         test: /\.(pug|jade)$/,
         use: 'pug-loader'
       },
@@ -75,23 +75,23 @@ module.exports = {
   // https://webpack.js.org/concepts/plugins/
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/page-index/tmpl.pug',
+      template: './src/page-index/index.pug',
       inject: true,
       chunks: ['index'],
       filename: 'index.html'
     }),
-    // new HtmlWebpackPlugin({
-    //   template: './src/page-about/tmpl.html',
-    //   inject: true,
-    //   chunks: ['about'],
-    //   filename: 'about.html'
-    // }),
-    // new HtmlWebpackPlugin({
-    //   template: './src/page-contacts/tmpl.html',
-    //   inject: true,
-    //   chunks: ['contacts'],
-    //   filename: 'contacts.html'
-    // }),
+    new HtmlWebpackPlugin({
+      template: './src/page-catalog/catalog.pug',
+      inject: true,
+      chunks: ['catalog'],
+      filename: 'catalog.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/page-product/product.pug',
+      inject: true,
+      chunks: ['product'],
+      filename: 'product.html'
+    }),
     
     // new MiniCssExtractPlugin({
     //   filename: "[name].css",

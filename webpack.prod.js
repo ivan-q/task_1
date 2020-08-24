@@ -17,8 +17,8 @@ module.exports = {
   // https://webpack.js.org/concepts/entry-points/#multi-page-application
   entry: {
     index: './src/page-index/main.js',
-    // about: './src/page-about/main.js',
-    // contacts: './src/page-contacts/main.js'
+    catalog: './src/page-catalog/main.js',
+    product: './src/page-product/main.js'
   },
 
   // how to write the compiled files to disk
@@ -48,9 +48,17 @@ module.exports = {
         ]
       },
       {
+        //pug
         test: /\.pug$/,
         use: 'pug-loader'
       },
+
+      {
+        // Fonts
+        test: /\.(woff|woff2|eot|otf|ttf)$/,
+        use: 'file-loader'
+      },
+
       {
         // Load all images as base64 encoding if they are smaller than 8192 bytes
         test: /\.(png|jpe?g|gif|svg)$/i,
@@ -72,26 +80,26 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(), // cleans output.path by default
     new HtmlWebpackPlugin({
-      template: './src/page-index/tmpl.pug',
-      inject: 'body',
+      template: './src/page-index/index.pug',
+      inject: true,
       chunks: ['index'],
       filename: 'index.html',
       minify: false
     }),
-    // new HtmlWebpackPlugin({
-    //   template: './src/page-about/tmpl.html',
-    //   inject: 'body',
-    //   chunks: ['about'],
-    //   filename: 'about.html',
-    //   minify: false
-    // }),
-    // new HtmlWebpackPlugin({
-    //   template: './src/page-contacts/tmpl.html',
-    //   inject: 'body',
-    //   chunks: ['contacts'],
-    //   filename: 'contacts.html',
-    //   minify: false
-    // }),
+    new HtmlWebpackPlugin({
+      template: './src/page-catalog/catalog.pug',
+      inject: true,
+      chunks: ['catalog'],
+      filename: 'catalog.html',
+      minify: false
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/page-product/product.pug',
+      inject: true,
+      chunks: ['product'],
+      filename: 'product.html',
+      minify: false
+    }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
       chunkFilename: '[id].[contenthash].css'
