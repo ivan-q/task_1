@@ -6,6 +6,20 @@ html(lang="en")
         title Catalog
         link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css' integrity='sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/' crossorigin='anonymous')
     body
-        include ../partials/nav/nav.pug
-        
-        include ../partials/footer/footer.pug
+       
+        .catalog
+            include ../partials/nav/nav.pug
+            .catalog__title-wrap.container
+                h1.catalog__title Earphones
+
+            .catalog__wrap
+                aside.parameters
+                include ../partials/product_list/product_list.pug
+
+            include ../partials/footer/footer.pug
+
+        script.
+            const nav = document.querySelector('.nav__burger');
+            nav.onclick = function () {
+            document.querySelector('.nav__menu').classList.toggle('open');
+            }    

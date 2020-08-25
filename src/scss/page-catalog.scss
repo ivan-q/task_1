@@ -1,0 +1,57 @@
+@import "_var_mix";
+
+.catalog {
+    &__title {
+        @include font("Montserrat-Bold", 36px, 55px);
+        color: #2B2835;
+        margin-top: 59px;
+        margin-bottom: 31px;
+    }
+
+    &__wrap {
+        max-width: 1248px;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        column-gap: 6.6%;
+        margin: 0 auto;
+        @include mobile {
+            width: initial;
+            margin: 0 20px;
+        }
+        @include tablet_desktop {
+            width: initial;
+            margin: 0 96px;
+        }
+        @include tablet {
+            margin: 0 3%;
+        }
+
+        .parameters {
+            width: 223px;
+            height: 600px;
+            background-color: royalblue;
+        }
+        
+        .product-list {
+            .container {
+                all: initial;
+
+                font-family: "Montserrat-Regular";
+                display: grid;
+                padding-top: 89px - 31px;
+                grid-template-columns: repeat(auto-fill, minmax(296px, 1fr));
+                grid-gap: 40px 20px;
+            }
+           
+            &__price {
+                margin-right: 13px;
+            }
+            
+        }    
+    
+
+
+
+
+    }
+}
