@@ -43,7 +43,6 @@ $turquoise: rgba(0, 176, 255, 0.45);
 }
 
 
-
 //Миксин для шрифта
 @mixin font($font-family, $font-size, $line-height) {
     font-family: $font-family;
@@ -54,8 +53,6 @@ $turquoise: rgba(0, 176, 255, 0.45);
 //      Montserrat-Medium     500
 //      Montserrat-SemiBold   600
 //      Montserrat-Bold       700
-
-
 
 
 
@@ -84,8 +81,6 @@ $turquoise: rgba(0, 176, 255, 0.45);
         @content;
     }
 }
-
-
 
 
 
@@ -183,6 +178,7 @@ $turquoise: rgba(0, 176, 255, 0.45);
         background: $bg;
         width: $width;
         height: 41px;
+        font-size: 14px;
         line-height: 41px;
         &:hover {
             background: #00b0ff;

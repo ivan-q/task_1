@@ -47,7 +47,7 @@
 .parameters {
     width: 223px;
     height: 669px;
-    // background-color: rgba(65, 105, 225, 0.233);
+    background-color: rgba(65, 105, 225, 0.233);
     
     h2 {
         @include font("Montserrat-Bold", 24px, 55px);
@@ -151,13 +151,26 @@
                 background-color: $turquoise;
             }
         }
-        
-        
     }
 
     &__type {
         h2 {
             margin-top: 40px;
+        }
+    }
+    &__details {
+        border: 1px solid #00B0FF;
+        padding: 8px 0 10px 13px;
+        :focus {
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+        > * {
+            @include font("Montserrat-Medium", 13px, 19px);
+        }
+        >:nth-child(2) {
+            margin-top: 9px;
         }
     }
 
