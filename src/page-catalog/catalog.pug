@@ -15,19 +15,39 @@ html(lang="en")
 
             .catalog__wrap
                 aside.parameters
-                    p Price
-                    p
-                        label(for="amount")
-                        input(type="text" id="amount" readonly)
-                    #slider-range
+                    .parameters__price
+                        h2 Price
+                        input(type="text" id="amount")
+                        input(type="text" id="amount-till")
+                        #slider-range
+                        input.checkbox(type="checkbox" id="sell" checked)
+                        label.checkbox-label(for="sell") Sell
+                        br
+                        input.checkbox(type="checkbox" id="new")
+                        label.checkbox-label(for="new") New
 
-                    details
-                        summary Lorem ipsum
-                        p Lorem
-                        p Lorem
-                        p Lorem
-                        p Lorem
-                        p Lorem
+                    .parameters__color
+                        h2 Color
+                        .color
+                        .color
+                        .color
+                        .color
+                        .color
+                        .color
+                        .color
+                        .color
+                        .color
+                        .color
+                    
+                    .parameters__type
+                        h2 Type
+                        details
+                            summary Closed-Back
+                            p Open-Back
+                            p On-Ear
+                            p Over-Ear 
+                            p In-Ear
+                            p Earbuds
 
                 include ../partials/product_list/product_list.pug
 

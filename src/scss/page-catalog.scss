@@ -3,7 +3,7 @@
 .catalog {
     &__title {
         @include font("Montserrat-Bold", 36px, 55px);
-        color: #2B2835;
+        color: #2b2835;
         margin-top: 59px;
         margin-bottom: 31px;
     }
@@ -26,60 +26,139 @@
             margin: 0 3%;
         }
 
-        .parameters {
-            width: 223px;
-            height: 600px;
-            background-color: rgba(65, 105, 225, 0.233);
+    }
 
-            #amount {
-                border: 1; 
-                // color: #77d5f7; 
-                font-weight: bold;
-                outline: none;
+    .product-list {
+        .container {
+            all: initial;
+            font-family: "Montserrat-Regular";
+            display: grid;
+            padding-top: 89px - 31px;
+            grid-template-columns: repeat(auto-fill, minmax(296px, 1fr));
+            grid-gap: 40px 20px;
+        }
+        &__price {
+            margin-right: 13px;
+        }
+    }
+}
+
+
+.parameters {
+    width: 223px;
+    height: 669px;
+    // background-color: rgba(65, 105, 225, 0.233);
+    
+    h2 {
+        @include font("Montserrat-Bold", 24px, 55px);
+        color: #2b2835;
+    }
+
+    &__price {
+        h2 {
+            margin-bottom: 14px;
+        }
+        #amount, #amount-till {
+            background: #F8F8F9;
+            border: 1px solid #B8B8B8;
+            @include font("Montserrat-Medium", 13px, 16px);
+            outline: none;
+            width: 84px;
+            padding: 10px 0 6px 10px;
+        }
+        #amount-till {
+            float: right;
+        }
+    
+        #slider-range {
+            border: none;
+            background: #b8b8b8;
+            height: 2px;
+            margin: 28px 0 46px 0;
+            
+        }
+
+        .ui-slider-range {
+            background: #00b0ff;
+            height: 2px;
+        }
+
+        .ui-slider-handle {
+            margin-top: -3px;
+            outline: none;
+            border-radius: 50px;
+            border: 1px solid #00b0ff;
+            width: 15px;
+            height: 15px;
+            background: #fff;
+        }
+
+        .checkbox {
+            margin-bottom: 20px;
+        }
+        .checkbox-label {
+            margin-left: 10px;
+        }
+    }
+
+    &__color {
+        display: grid;
+        grid-template: 45px repeat(2, 28px) / repeat(5, 28px);
+        row-gap: 20px;
+        column-gap: (223 - 28px*5) / 4;
+        width: 100%;
+       
+        h2 {
+            grid-row: 1/2;
+            grid-column: 1/6;
+        }
+        
+        .color {
+            border: 2px solid #B8B8B8;
+            cursor: pointer;
+            &:hover {
+                border: 2px solid #00B0FF;
             }
-            #slider-range {
-                border: none;
-                background: #B8B8B8;
-                height: 2px;
-                margin-top: 28px;
-                margin-bottom: 46px;
-                .ui-slider-range {
-                    background: #00B0FF;
-                    height: 2px;
-                }
-                .ui-slider-handle {
-                    margin-top: -4px;
-                    outline: none;
-                    border-radius: 50px;
-                    width: 15px;
-                    height: 15px;
-                }
-                .ui-slider-handle:hover {
-                    // border: initial;
-                }
+
+            &:nth-child(2) {
+                background-color: $yellow;
+            }
+            &:nth-child(3) {
+                background-color: $green;
+            }
+            &:nth-child(4) {
+                background-color: $pink-pale;
+            }
+            &:nth-child(5) {
+                background-color: $pink;
+            }
+            &:nth-child(6) {
+                background-color: $black;
+            }
+            &:nth-child(7) {
+                background-color: $brown;
+            }
+            &:nth-child(8) {
+                background-color: $purple-pale;
+            }
+            &:nth-child(9) {
+                background-color: $grey;
+            }
+            &:nth-child(10) {
+                background-color: $violet;
+            }
+            &:nth-child(11) {
+                background-color: $turquoise;
             }
         }
         
-        .product-list {
-            .container {
-                all: initial;
-
-                font-family: "Montserrat-Regular";
-                display: grid;
-                padding-top: 89px - 31px;
-                grid-template-columns: repeat(auto-fill, minmax(296px, 1fr));
-                grid-gap: 40px 20px;
-            }
-           
-            &__price {
-                margin-right: 13px;
-            }
-            
-        }    
-    
-
-
-
-
+        
     }
+
+    &__type {
+        h2 {
+            margin-top: 40px;
+        }
+    }
+
 }

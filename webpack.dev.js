@@ -17,7 +17,7 @@ module.exports = {
   },
 
   devServer: {
-    port: 4040,
+    port: 8080,
     writeToDisk: false
   },
 
