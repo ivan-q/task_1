@@ -1,5 +1,12 @@
 import { Bar } from '../js/bar.es6'
 const { Foo } = require('../js/foo.cjs')
+// require('bootstrap/dist/css/bootstrap.css')
+
+require("jquery/dist/jquery.min.js")
+require("jqueryui/jquery-ui.min.js")
+require("jqueryui/jquery-ui.min.css")
+require('../js/jquery-scripts.js')
+
 require('normalize.css/normalize.css')
 require('../css/main.css')
 require('./page.css')
