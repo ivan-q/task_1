@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-// Слайдер цены на странице каталога
+// Слайдер цены на странице каталога (jQuery)
 $(function () {
 
     $("#slider-range").slider({
@@ -22,14 +22,27 @@ $(function () {
     $("#amount-till").val($("#slider-range").slider("values", 1));
 });
 
+
 // Выпадающее меню в футере (мобильная версия)
 const nav = document.querySelector('.nav__burger');
 nav.onclick = function () {
     document.querySelector('.nav__menu').classList.toggle('open');
 }
 
+
 // Меню для фильтров на странице каталога (мобильная версия)
 const param = document.querySelector('.parameters-menu');
 param.onclick = function () {
     document.querySelector('.parameters').classList.toggle('open');
 }
+
+
+// Применяем к товарам каталога стикеры New и Sale
+const s = '.product-list__item:nth-child'
+let product = document.querySelector(`${s}(2)`).classList.add('new', 'sale');
+
+product = document.querySelector(`${s}(3)`).classList.add('sale');
+product = document.querySelector(`${s}(5)`).classList.add('sale');
+
+product = document.querySelector(`${s}(4)`).classList.add('new');
+

@@ -17,9 +17,7 @@
         @include mobile {
             width: initial;
             margin: 0 20px;
-            // display: unset;
             grid-template-columns: auto;
-
         }
         @include tablet_desktop {
             width: initial;
@@ -39,6 +37,9 @@
             grid-template-columns: repeat(auto-fill, minmax(296px, 1fr));
             grid-gap: 40px 20px;
             padding-top: 20px;
+        }
+        &__item {
+            position: relative;
         }
         &__price {
             margin-right: 13px;
@@ -284,15 +285,15 @@
 
 .parameters-menu {
     display: none;
-    background-color: #F8F8F9;
+    background-color: #f8f8f9;
     @include font("Montserrat-Regular", 12px, 12px);
-    color: #00B0FF;
+    color: #00b0ff;
     padding: 8px 0 8px 13.87px;
     position: relative;
     cursor: pointer;
-    
+
     &:after {
-        content: '';
+        content: "";
         background-image: url(../img/icons/arrow-filters.svg);
         background-repeat: no-repeat;
         width: 12.88px;
