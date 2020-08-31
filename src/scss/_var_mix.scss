@@ -182,6 +182,7 @@ $type-color: #00b0ff; //Основной цвет рамки и ховер эф�
         height: 41px;
         font-size: 14px;
         line-height: 41px;
+        @content;
         &:hover {
             background: #00b0ff;
         }
@@ -221,6 +222,13 @@ $type-color: #00b0ff; //Основной цвет рамки и ховер эф�
 }
 .product-list {
     @include button(white, black, 145px);
+    @include mobile {
+        @include button(white, black, 68px) {
+            height: 20px;
+            line-height: 20px;
+            font-size: 9px;
+        }
+    }
 }
 
 

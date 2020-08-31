@@ -6,6 +6,10 @@
         color: #2b2835;
         margin-top: 59px;
         margin-bottom: 31px;
+        @include mobile {
+            font-size: 32px;
+            line-height: 35px;
+        }
     }
 
     &__wrap {
@@ -37,12 +41,44 @@
             grid-template-columns: repeat(auto-fill, minmax(296px, 1fr));
             grid-gap: 40px 20px;
             padding-top: 20px;
+            @include mobile {
+                // grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(2, minmax(138px, 1fr));
+                grid-template-rows: repeat(auto-fill, minmax(243px, auto));
+                grid-gap: 20px 20px;
+            }
         }
-        &__item {
-            position: relative;
+        @include mobile {
+            &__item {
+                height: 272px;
+                max-height: min-content;
+            }
+            &__img {
+                height: unset;
+                img {
+                    width: 100%;
+                    max-height: 143px;
+                    object-fit: scale-down;
+                }
+            }
+            &__title {
+                font-size: 18px;
+                line-height: 24px;
+            }
+            &__description {
+                font-size: 8px;
+                line-height: 12px;
+            }
+            &__wrap_price-button {
+                padding-bottom: 11px;
+            }
         }
         &__price {
             margin-right: 13px;
+            @include mobile {
+                font-size: 11px;
+                line-height: 13px;
+            }
         }
     }
 }
