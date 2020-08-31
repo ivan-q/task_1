@@ -17,6 +17,9 @@
         @include mobile {
             width: initial;
             margin: 0 20px;
+            // display: unset;
+            grid-template-columns: auto;
+
         }
         @include tablet_desktop {
             width: initial;
@@ -35,6 +38,7 @@
             padding-top: 89px - 31px;
             grid-template-columns: repeat(auto-fill, minmax(296px, 1fr));
             grid-gap: 40px 20px;
+            padding-top: 20px;
         }
         &__price {
             margin-right: 13px;
@@ -44,17 +48,30 @@
 
 .parameters {
     width: 223px;
-    height: 669px;
-    // background-color: rgba(255, 1, 170, 0.233);
-
+    padding-bottom: 123px;
+    // background-color: rgb(241, 183, 214);
+    @include mobile {
+        display: none;
+        padding-top: 59px;
+        padding-bottom: 0;
+        min-height: 647px;
+    }
     h2 {
         @include font("Montserrat-Bold", 24px, 55px);
         color: #2b2835;
+        @include mobile {
+            font-size: 14px;
+            line-height: 14px;
+            margin-bottom: 20px;
+        }
     }
 
     &__price {
         h2 {
             margin-bottom: 14px;
+            @include mobile {
+                margin-bottom: 20px;
+            }
         }
         %amount-input {
             background: #f8f8f9;
@@ -130,6 +147,9 @@
     &__color {
         display: grid;
         grid-template: 45px repeat(2, 28px) / repeat(5, 28px);
+        @include mobile {
+            grid-template: 17px repeat(2, 28px) / repeat(5, 28px);
+        }
         row-gap: 20px;
         column-gap: (223 - 28px * 5) / 4;
         width: 100%;
@@ -197,6 +217,7 @@
                 border: none;
                 padding-top: 0;
             }
+
             &[open] summary {
                 border: 1px solid $type-color;
                 padding-top: 8px;
@@ -229,7 +250,7 @@
                     background-position: center;
                     width: 12.92px;
                     height: 6.46px;
-                    padding: 7px;
+                    margin: 7px;
                 }
             }
 
@@ -252,5 +273,36 @@
                 }
             }
         }
+    }
+}
+
+.open {
+    @include mobile {
+        display: initial;
+    }
+}
+
+.parameters-menu {
+    display: none;
+    background-color: #F8F8F9;
+    @include font("Montserrat-Regular", 12px, 12px);
+    color: #00B0FF;
+    padding: 8px 0 8px 13.87px;
+    position: relative;
+    cursor: pointer;
+    
+    &:after {
+        content: '';
+        background-image: url(../img/icons/arrow-filters.svg);
+        background-repeat: no-repeat;
+        width: 12.88px;
+        height: 7px;
+        float: right;
+        position: absolute;
+        right: 11.5px;
+        top: 9.5px;
+    }
+    @include mobile {
+        display: flex;
     }
 }

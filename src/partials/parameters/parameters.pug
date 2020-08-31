@@ -1,0 +1,26 @@
+aside.parameters
+    .parameters__price
+        h2 Price
+        input(type="text" id="amount")
+        input(type="text" id="amount-till")
+        #slider-range
+        
+        .wrap-checkbox
+            input.checkbox(type="checkbox" id="sell" checked)
+            label(for="sell") Sell
+        br
+        .wrap-checkbox
+            input.checkbox(type="checkbox" id="new")
+            label(for="new") New
+    .parameters__color
+        h2 Color
+        - for(let i = 0; i < 10; i++)
+            .color
+    
+    .parameters__type
+        h2 Type
+        details.parameters__details
+            summary Closed-Back
+            .items
+                each name in ['Open-Back', 'On-Ear', 'Over-Ear', 'In-ear', 'Earbuds']
+                    p= name

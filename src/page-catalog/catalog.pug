@@ -13,52 +13,9 @@ html(lang="en")
             .catalog__title-wrap.container
                 h1.catalog__title Earphones
 
+            p.parameters-menu.container Filters
             .catalog__wrap
-                aside.parameters
-                    .parameters__price
-                        h2 Price
-                        input(type="text" id="amount")
-                        input(type="text" id="amount-till")
-                        #slider-range
-                        
-                        .wrap-checkbox
-                            input.checkbox(type="checkbox" id="sell" checked)
-                            label(for="sell") Sell
-                        br
-                        .wrap-checkbox
-                            input.checkbox(type="checkbox" id="new")
-                            label(for="new") New
-
-                    .parameters__color
-                        h2 Color
-                        .color
-                        .color
-                        .color
-                        .color
-                        .color
-                        .color
-                        .color
-                        .color
-                        .color
-                        .color
-                    
-                    .parameters__type
-                        h2 Type
-                        details.parameters__details
-                            summary Closed-Back
-                            .items
-                                p Open-Back
-                                p On-Ear
-                                p Over-Ear 
-                                p In-Ear
-                                p Earbuds
-
+                include ../partials/parameters/parameters.pug
                 include ../partials/product_list/product_list.pug
 
             include ../partials/footer/footer.pug
-
-        script.
-            const nav = document.querySelector('.nav__burger');
-            nav.onclick = function () {
-            document.querySelector('.nav__menu').classList.toggle('open');
-            }    

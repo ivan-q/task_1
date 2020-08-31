@@ -5,7 +5,7 @@ const { Foo } = require('../js/foo.cjs')
 require("jquery/dist/jquery.min.js")
 require("jqueryui/jquery-ui.min.js")
 require("jqueryui/jquery-ui.min.css")
-require('../js/jquery-scripts.js')
+require('../js/scripts.js')
 
 require('normalize.css/normalize.css')
 require('../css/main.css')
