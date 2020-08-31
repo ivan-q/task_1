@@ -30,7 +30,7 @@
     .product-list {
         .container {
             all: initial;
-            font-family: "Montserrat-Regular";
+            font-family: "Montserrat-Regular", Arial;
             display: grid;
             padding-top: 89px - 31px;
             grid-template-columns: repeat(auto-fill, minmax(296px, 1fr));

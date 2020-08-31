@@ -34,7 +34,7 @@
         }
     }
     &__title {
-        @include font("Montserrat-Medium", 36px, 55px);
+        @include font("Montserrat-Medium" Arial, 36px, 55px);
         color: #2b2835;
         @include mobile {
             font-size: 40px;
