@@ -94,6 +94,12 @@ $type-color: #00b0ff; //Основной цвет рамки и ховер эф�
     }
 }
 
+@mixin width-534-768px {
+    @media (min-width: 534px) and (max-width: 768px - 1px) {
+        @content;
+    }
+}
+
 @mixin width-573-767px {
     @media (min-width: 573px) and (max-width: 767px) {
         @content;
@@ -114,6 +120,12 @@ $type-color: #00b0ff; //Основной цвет рамки и ховер эф�
 
 @mixin width-1366px {
     @media (width: 1366px) {
+        @content;
+    }
+}
+
+@mixin width-1200-1367px {
+    @media (min-width: 1200px) and (max-width: 1367px) {
         @content;
     }
 }
@@ -156,6 +168,12 @@ $type-color: #00b0ff; //Основной цвет рамки и ховер эф�
 
 @mixin width-1200-1400px {
     @media (min-width: 1200px) and (max-width: 1400px) {
+        @content;
+    }
+}
+
+@mixin width-1200-1366px {
+    @media (min-width: 1200px) and (max-width: 1366px) {
         @content;
     }
 }
@@ -223,6 +241,13 @@ $type-color: #00b0ff; //Основной цвет рамки и ховер эф�
 .product-list {
     @include button(white, black, 145px);
     @include mobile {
+        @include button(white, black, 68px) {
+            height: 20px;
+            line-height: 20px;
+            font-size: 9px;
+        }
+    }
+    @include tablet {
         @include button(white, black, 68px) {
             height: 20px;
             line-height: 20px;

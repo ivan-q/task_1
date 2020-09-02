@@ -1,0 +1,269 @@
+@import "../../scss/_var_mix";
+
+.parameters {
+    width: 223px;
+    padding-bottom: 123px;
+    // background-color: rgb(241, 183, 214);
+    @include mobile {
+        display: none;
+        padding-top: 59px;
+        padding-bottom: 0;
+        min-height: 647px;
+    }
+    h2 {
+        @include font("Montserrat-Bold", 24px, 55px);
+        color: #2b2835;
+        @include mobile {
+            font-size: 14px;
+            line-height: 14px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__price {
+        h2 {
+            margin-bottom: 14px;
+            @include mobile {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+        }
+        %amount-input {
+            background: #f8f8f9;
+            border: 1px solid #b8b8b8;
+            @include font("Montserrat-Medium", 13px, 16px);
+            outline: none;
+            width: 84px;
+            padding: 10px 0 6px 10px;
+        }
+        #amount,
+        #amount-till {
+            @extend %amount-input;
+        }
+        #amount-till {
+            float: right;
+        }
+
+        #slider-range {
+            border: none;
+            background: #b8b8b8;
+            height: 2px;
+            margin: 28px 0 46px 0;
+        }
+
+        .ui-slider-range {
+            background: #00b0ff;
+            height: 2px;
+        }
+
+        .ui-slider-handle {
+            margin-top: -3px;
+            outline: none;
+            border-radius: 50px;
+            border: 1px solid #00b0ff;
+            width: 15px;
+            height: 15px;
+            background: #fff;
+        }
+
+        .wrap-checkbox {
+            margin-bottom: 10px;
+        }
+        .checkbox {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+        }
+        .checkbox + label {
+            position: relative;
+            padding: 0 0 0 30px;
+            cursor: pointer;
+        }
+        .checkbox + label:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: -3px;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #b8b8b8;
+        }
+        .checkbox:checked + label:before {
+            border: 1px solid #00b0ff;
+            background-image: url(../../img/icons/checked.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .checkbox:hover + label:before {
+            border: 1px solid #00b0ff;
+        }
+    }
+
+    &__color {
+        display: grid;
+        grid-template: 45px repeat(2, 28px) / repeat(5, 28px);
+        @include mobile {
+            grid-template: 17px repeat(2, 28px) / repeat(5, 28px);
+        }
+        row-gap: 20px;
+        column-gap: (223 - 28px * 5) / 4;
+        width: 100%;
+        margin-top: 40px;
+
+        h2 {
+            grid-row: 1/2;
+            grid-column: 1/6;
+        }
+
+        .color {
+            border: 2px solid #b8b8b8;
+            cursor: pointer;
+            &:hover {
+                border: 2px solid #00b0ff;
+            }
+            //Первый элемент сетки - это заголовок h2. Остальные - цвета, 10 штук
+            &:nth-child(2) {
+                background-color: $yellow;
+            }
+            &:nth-child(3) {
+                background-color: $green;
+            }
+            &:nth-child(4) {
+                background-color: $pink-pale;
+            }
+            &:nth-child(5) {
+                background-color: $pink;
+            }
+            &:nth-child(6) {
+                background-color: $black;
+            }
+            &:nth-child(7) {
+                background-color: $brown;
+            }
+            &:nth-child(8) {
+                background-color: $purple-pale;
+            }
+            &:nth-child(9) {
+                background-color: $grey;
+            }
+            &:nth-child(10) {
+                background-color: $violet;
+            }
+            &:nth-child(11) {
+                background-color: $turquoise;
+            }
+        }
+        .color_active {
+            border: 2px solid #00b0ff;
+        }
+    }
+
+    &__type {
+        h2 {
+            margin-top: 40px;
+        }
+        details {
+            @include font("Montserrat-Medium", 13px, 19px);
+            border: 1px solid $type-color;
+            padding: 8px 0 0 0;
+            :focus {
+                border: none;
+                outline: none;
+                cursor: pointer;
+            }
+            &[open] {
+                border: none;
+                padding-top: 0;
+            }
+
+            &[open] summary {
+                border: 1px solid $type-color;
+                padding-top: 8px;
+            }
+            &[open] summary:after {
+                content: "";
+                transform: rotate(360deg);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            &[open] .items {
+                padding: 9px 0 18px 13px;
+            }
+
+            summary {
+                list-style: none;
+                &::-webkit-details-marker {
+                    display: none;
+                }
+                cursor: pointer;
+                font-size: 13px;
+                line-height: 16px;
+                padding: 0 0 10px 13px;
+                &:after {
+                    content: "";
+                    float: right;
+                    background: url(../../img/icons/arrow-type.svg);
+                    transform: rotate(270deg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    width: 12.92px;
+                    height: 6.46px;
+                    margin: 7px;
+                }
+            }
+
+            .items {
+                padding-left: 13px;
+                padding-top: -10px;
+                border: 1px solid #979797;
+                border-top: none;
+                p {
+                    font-size: 14px;
+                    line-height: 19px;
+                    opacity: 0.75;
+                    cursor: pointer;
+                    &:hover {
+                        color: $type-color;
+                    }
+                    &:active {
+                        color: darken($type-color, 15%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.open {
+    @include mobile {
+        display: initial;
+    }
+}
+
+.parameters-menu {
+    display: none;
+    background-color: #f8f8f9;
+    @include font("Montserrat-Regular", 12px, 12px);
+    color: #00b0ff;
+    padding: 8px 0 8px 13.87px;
+    position: relative;
+    cursor: pointer;
+    @include width-534-768px {
+        width: 50%;
+    }
+
+    &:after {
+        content: '';
+        background-image: url(../../img/icons/arrow-filters.svg);
+        background-repeat: no-repeat;
+        width: 12.88px;
+        height: 7px;
+        float: right;
+        position: absolute;
+        right: 11.5px;
+        top: 9.5px;
+    }
+    @include mobile {
+        display: flex;
+    }
+}

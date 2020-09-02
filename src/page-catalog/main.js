@@ -23,6 +23,8 @@ require('../partials/footer/footer.scss') //Footer
 require('../scss/pixel_perfect_1440px.scss')
 require('../scss/pixel_perfect_375px.scss')
 require('../scss/page-catalog.scss')
+require('../partials/parameters/parameters.scss')
+
 
 
 document.addEventListener('DOMContentLoaded', () => {

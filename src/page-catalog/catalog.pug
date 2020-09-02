@@ -17,5 +17,15 @@ html(lang="en")
             .catalog__wrap
                 include ../partials/parameters/parameters.pug
                 include ../partials/product_list/product_list.pug
+                .catalog__pagination
+                    -for(let i = 1; i <= 4; i++)
+                        .pag #{i}
 
-            include ../partials/footer/footer.pug
+        //- Меню для фильтров на странице каталога (мобильная версия)
+        script.
+            const param = document.querySelector('.parameters-menu');
+            param.onclick = function () {
+                document.querySelector('.parameters').classList.toggle('open')
+            }
+
+        include ../partials/footer/footer.pug

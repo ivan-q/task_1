@@ -23,7 +23,7 @@ $(function () {
 });
 
 
-// Выпадающее меню в футере (мобильная версия)
+// Выпадающее меню в навбаре (мобильная версия)
 const nav = document.querySelector('.nav__burger');
 nav.onclick = function () {
     document.querySelector('.nav__menu').classList.toggle('open');
@@ -31,10 +31,11 @@ nav.onclick = function () {
 
 
 // Меню для фильтров на странице каталога (мобильная версия)
-const param = document.querySelector('.parameters-menu');
-param.onclick = function () {
-    document.querySelector('.parameters').classList.toggle('open');
-}
+// const param = document.querySelector('.parameters-menu');
+// param.onclick = function () {
+//     document.querySelector('.parameters').classList.toggle('open')
+// }
+//Отключил скрипт и перенёс его на страницу каталога, потому что здесь из-за него ломаются стили главной страницы. Пока не знаю почему
 
 
 // Применяем к товарам каталога стикеры New и Sale
