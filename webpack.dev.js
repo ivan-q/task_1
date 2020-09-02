@@ -23,7 +23,8 @@ module.exports = {
 
   module: {
     rules: [
-      { //babel
+      { 
+        //babel
         test: /\.js$/i,
         exclude: /node_modules/,
         loader: 'babel-loader',
@@ -32,7 +33,8 @@ module.exports = {
         }
       },
 
-      { //sass
+      { 
+        //sass
         test: /\.(css|scss|sass)(\?.*)?$/i,
         use: [
           'style-loader',
@@ -54,7 +56,8 @@ module.exports = {
         use: 'file-loader'
       },
 
-      { // Load all images as base64 encoding if they are smaller than 8192 bytes
+      { 
+        // Load all images as base64 encoding if they are smaller than 8192 bytes
         test: /\.(png|jpe?g|gif|svg)$/i,
         use: [
           {
@@ -72,7 +75,6 @@ module.exports = {
     ]
   },
 
-  // https://webpack.js.org/concepts/plugins/
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/page-index/index.pug',
