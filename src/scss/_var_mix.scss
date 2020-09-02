@@ -172,8 +172,8 @@ $type-color: #00b0ff; //Основной цвет рамки и ховер эф�
     }
 }
 
-@mixin width-1200-1366px {
-    @media (min-width: 1200px) and (max-width: 1366px) {
+@mixin width-1200-1365px {
+    @media (min-width: 1200px) and (max-width: 1365px) {
         @content;
     }
 }

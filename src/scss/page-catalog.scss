@@ -61,7 +61,7 @@
             @include tablet-l {
                 grid-template-columns: repeat(3, minmax(138px, 230px));
             }
-            @include width-1200-1366px {
+            @include width-1200-1365px {
                 grid-template-columns: repeat(2, minmax(296px, 1fr));
             }
         }

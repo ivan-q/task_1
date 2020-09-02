@@ -1,6 +1,12 @@
 import { Bar } from '../js/bar.es6'
 const { Foo } = require('../js/foo.cjs')
 // require('bootstrap/dist/css/bootstrap.css')
+
+require("jquery/dist/jquery.min.js")
+require("jqueryui/jquery-ui.min.js")
+require("jqueryui/jquery-ui.min.css")
+require('../js/scripts.js')
+
 require('normalize.css/normalize.css')
 require('../css/main.css')
 require('./page.css')
@@ -16,6 +22,10 @@ require('../partials/signup/signup.scss')
 require('../partials/footer/footer.scss') //Footer
 require('../scss/pixel_perfect_1440px.scss')
 require('../scss/pixel_perfect_375px.scss')
+require('../scss/page-catalog.scss')
+require('../partials/parameters/parameters.scss')
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DOMContentLoaded', 'page-product')
