@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 // const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
@@ -33,14 +33,23 @@ module.exports = {
         }
       },
 
-      { 
-        //sass
+      // { 
+      //   //sass
+      //   test: /\.(css|scss|sass)(\?.*)?$/i,
+      //   use: [
+      //     'style-loader',
+      //     'css-loader',
+      //     'sass-loader',
+      //     // Please note we are not running postcss here
+      //   ]
+      // },
+      
+      {
         test: /\.(css|scss|sass)(\?.*)?$/i,
         use: [
-          'style-loader',
+          MiniCssExtractPlugin.loader,
           'css-loader',
-          'sass-loader',
-          // Please note we are not running postcss here
+          'sass-loader'
         ]
       },
 
@@ -80,31 +89,25 @@ module.exports = {
       template: './src/page-index/index.pug',
       inject: true,
       chunks: ['index'],
-      filename: 'index.html'
+      filename: 'index.html',
     }),
     new HtmlWebpackPlugin({
       template: './src/page-catalog/catalog.pug',
       inject: true,
       chunks: ['catalog'],
-      filename: 'catalog.html'
+      filename: 'catalog.html',
     }),
     new HtmlWebpackPlugin({
       template: './src/page-product/product.pug',
       inject: true,
       chunks: ['product'],
-      filename: 'product.html'
+      filename: 'product.html',
     }),
     
-    // new webpack.ProvidePlugin({
-    //   $: "jquery/dist/jquery.min.js",
-    //   jQuery: "jquery/dist/jquery.min.js",
-    //   "window.jQuery": "jquery/dist/jquery.min.js"
-    // })
-
-    // new MiniCssExtractPlugin({
-    //   filename: "[name].css",
-    // })
-    
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+      chunkFilename: '[id].css'
+    })
     
   ]
 }

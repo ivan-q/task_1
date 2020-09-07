@@ -9,6 +9,41 @@ html(lang="en")
         .product-page
             include ../partials/nav/nav.pug
 
-        h1 Hello
+            .slider-wrap.container
+                .product-page__slider    
+                    div
+                        img(src="../src/img/product/small/image(1).jpg" alt="product image")
+                    div
+                        img(src="../src/img/product/small/image(2).jpg" alt="product image")
+                    div
+                        img(src="../src/img/product/small/image(3).jpg" alt="product image")        
+
+                include ../partials/slider_section/slider_section.pug
+
+            section.recommended.container
+                h2 Recommended
+
+            section.detailed.container
+                ul.detailed__list
+                    li Describtion
+                    li Characteristics
+                    li Reviews
+                .detailed__wrap
+                    .detailed__describtion
+                        p.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        p.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        
+                        video(src="../src/video/review.mp4" controls poster="../src/img/video_cap.jpg" )
+
+
+                    .detailed__characteristics
+
+
+                    .detailed__reviews
+
+
+
 
         include ../partials/footer/footer.pug

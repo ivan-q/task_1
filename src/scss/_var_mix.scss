@@ -255,6 +255,9 @@ $type-color: #00b0ff; //Основной цвет рамки и ховер эф�
         }
     }
 }
+.product-page .product {
+    @include button(white, black, 173px)
+}
 
 
 //Миксин для стикеров New и Sell
