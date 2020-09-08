@@ -10,7 +10,7 @@ html(lang="en")
             include ../partials/nav/nav.pug
 
             .slider-wrap.container
-                .product-page__slider    
+                .product-page__slider  
                     div
                         img(src="../src/img/product/small/image(1).jpg" alt="product image")
                     div
@@ -20,14 +20,17 @@ html(lang="en")
 
                 include ../partials/slider_section/slider_section.pug
 
-            section.recommended.container
-                h2 Recommended
+            section.recommended
+                .container
+                    h2 Recommended
+                    .recommended__placeholder
 
             section.detailed.container
                 ul.detailed__list
-                    li Describtion
-                    li Characteristics
-                    li Reviews
+                    li.describtion.active-tab Describtion
+                    li.characteristics Characteristics
+                    li.reviews Reviews
+                    
                 .detailed__wrap
                     .detailed__describtion
                         p.
@@ -35,16 +38,21 @@ html(lang="en")
                         p.
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                         .video-wrap
-                            video(src="../src/video/review.mp4" poster="../src/img/video_cap.jpg")
+                            video(src="../src/video/review.mp4" poster="../src/img/video_cap.jpg" muted)
                             .play-button-wrap
                                 .play-button
 
+                    .detailed__characteristics.hidden
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-                    .detailed__characteristics
-
-
-                    .detailed__reviews
-
+                    .detailed__reviews.hidden
+                        p.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 
 

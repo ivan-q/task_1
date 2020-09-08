@@ -38,12 +38,62 @@ nav.onclick = function () {
 //Отключил скрипт и перенёс его на страницу каталога, потому что здесь из-за него ломаются стили главной страницы. Пока не знаю почему
 
 
+
+
+
+
+
+
+// function switchTab() {
+//     document.querySelectorAll('.detailed__item').classList.remove('active-tab');
+
+// this.classList.add('active-tab');
+// }
+
+// let detailed = document.querySelector('.characteristics');
+// detailed.onclick = switchTab;    
+
+// detailed = document.querySelector('.reviews');
+// detailed.onclick = switchTab;    
+
+// detailed = document.querySelector('.describtion');
+// detailed.onclick = switchTab;    
+
+
+
+
+
+
+
+//При нажатии на кнопку воспроизведения видео, видео запускается, появляются элементы управления (controls) и кнопка исчезает
+let videoPlay = document.querySelector('.play-button-wrap');
+
+function playClip(media) {
+    media.play();
+}
+
+videoPlay.onclick = function() {
+    let video = document.querySelector('video');
+    video.classList.add('something');
+    video.setAttribute('controls', '');
+
+    playClip(video);
+    videoPlay.classList.add('hidden');
+}
+
+
+
+
 // Применяем к товарам каталога стикеры New и Sale
-const s = '.product-list__item:nth-child'
-let product = document.querySelector(`${s}(2)`).classList.add('new', 'sale');
+function stickers() {
+    const s = '.product-list__item:nth-child';
+    document.querySelector(`${s}(2)`).classList.add('new', 'sale');
 
-product = document.querySelector(`${s}(3)`).classList.add('sale');
-product = document.querySelector(`${s}(5)`).classList.add('sale');
+    document.querySelector(`${s}(3)`).classList.add('sale');
+    document.querySelector(`${s}(5)`).classList.add('sale');
 
-product = document.querySelector(`${s}(4)`).classList.add('new');
+    document.querySelector(`${s}(4)`).classList.add('new');
+}
+stickers();
+//По какой-то причине этот скрипт не работает с предыдущим. Работает только тот, который идёт первым
 
