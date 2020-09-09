@@ -74,6 +74,7 @@
         mix-blend-mode: normal;
         opacity: 0.39;
         a {
+            text-transform: uppercase;
             @include width-768-1050px {
                 font-size: 12px;
             }
