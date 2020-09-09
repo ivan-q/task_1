@@ -31,6 +31,8 @@ $turquoise: rgba(0, 176, 255, 0.45);
 
 $type-color: #00b0ff; //Основной цвет рамки и ховер эффектов в блоке .parameters__type
 
+$play-button: #00b0ff; //Цвет кнопки проигрывания видео
+
 //Mixins
 
 //Миксин для спрайтов
@@ -303,4 +305,35 @@ $bgc-sale: #ffeb3b;
         }
     }
     
+}
+
+
+//Псевдоселектор для пагинации на странице каталога
+ %arrows {
+    content: '';
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 1px;
+    cursor: pointer;
+}
+
+//Псевдоселектор для стрелок слайдера (маленькие картинки слева) на странице product
+%arrow-slider {
+    content: "";
+    position: absolute;
+    background-image: url(../img/icons/arrow-down-slider.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 22px;
+    height: 9.5px;
+    left: 50%;
+    margin-left: -11px;
+}
+
+//Скрыть элемент
+.hidden {
+    display: none;
 }

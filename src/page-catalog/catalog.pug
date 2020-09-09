@@ -17,9 +17,9 @@ html(lang="en")
             .catalog__wrap
                 include ../partials/parameters/parameters.pug
                 include ../partials/product_list/product_list.pug
-                .catalog__pagination
+                ul.catalog__pagination
                     -for(let i = 1; i <= 4; i++)
-                        .pag #{i}
+                        li.pag #{i}
 
         //- Меню для фильтров на странице каталога (мобильная версия)
         script.

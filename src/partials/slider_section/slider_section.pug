@@ -9,10 +9,9 @@ section.slider-section
             .color-change
                 h2.color-change__h2 Available Colors
                 p.color-change__p Find your Color
-                .color-change__circles
-                    div
-                    div
-                    div
+                ul.color-change__circles
+                    -for(let i = 0; i < 3; i++)
+                        li.circle
 
             .product__wrap
                 p.product__price $299.95
@@ -22,7 +21,6 @@ section.slider-section
             
         article.slider
             img(src='../src/img/Bitmap-1.png' alt='slider')
-            .pagination
-                div
-                div
-                div
+            ul.pagination
+                -for(let i = 0; i < 3; i++)
+                    li.pag

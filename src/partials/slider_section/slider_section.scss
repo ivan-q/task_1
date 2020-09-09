@@ -76,7 +76,7 @@
             @include tablet {
                 margin-top: -50px;
             }
-            div {
+            li.pag {
                 width: 10px;
                 height: 10px;
                 background-color: #d1d1d1;
@@ -84,15 +84,15 @@
             }
             
             //Эти два стиля потом убрать
-            div:first-child {
+            li.pag:first-child {
                 background-color: black;
             }
-            div:first-child:hover {
+            li.pag:first-child:hover {
                 background-color: black;
             }
             //----------------------------
 
-            div:hover {
+            li.pag:hover {
                 cursor: pointer;
                 background-color: #a7a6a6
             }
@@ -129,7 +129,7 @@
     &__circles {
         display: flex;
         margin-top: 19px;
-        div {
+        li.circle {
             border-radius: 50%;
             width: 37px;
             height: 37px;
@@ -137,19 +137,19 @@
             box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.135817);
             margin-right: 13px;
         }
-        div:nth-child(1) {
+        li.circle:nth-child(1) {
             background-color: #fff;
         }
-        div:nth-child(2) {
+        li.circle:nth-child(2) {
             background-color: #dd5656;
         }
-        div:nth-child(3) {
+        li.circle:nth-child(3) {
             background-color: black;
         }
-        div:last-child {
+        li.circle:last-child {
             margin-right: 0;
         }
-        div:hover {
+        li.circle:hover {
             transform: scale(1.1);
         }
     }
