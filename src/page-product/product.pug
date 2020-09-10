@@ -30,7 +30,7 @@ html(lang="en")
                     li.describtion.active-tab Describtion
                     li.characteristics Characteristics
                     li.reviews Reviews
-                    
+
                 .detailed__wrap
                     .detailed__describtion
                         p.
@@ -54,6 +54,16 @@ html(lang="en")
                         p.
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
+
+        script.
+            let color1 = document.querySelector('.circle:nth-child(1)');
+            color1.classList.add('circle_white');
+
+            let color2 = document.querySelector('.circle:nth-child(2)');
+            color2.classList.add('circle_red');
+            
+            let color3 = document.querySelector('.circle:nth-child(3)');
+            color3.classList.add('circle_black');
 
 
         include ../partials/footer/footer.pug

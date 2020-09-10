@@ -337,3 +337,33 @@ $bgc-sale: #ffeb3b;
 .hidden {
     display: none;
 }
+
+// Стили цветов товара
+%circle {
+    border-radius: 50%;
+    width: 37px;
+    height: 37px;
+    border: 1px solid #eaeaea;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.135817);
+    margin-right: 13px;
+    &:last-child {
+        margin-right: 0;
+    }
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+// Модификаторы цветов товара
+.circle_white {
+    @extend %circle;
+    background-color: #fff;
+}
+.circle_red {
+    @extend %circle;
+    background-color: #dd5656;
+}
+.circle_black {
+    @extend %circle;
+    background-color: black;
+}
