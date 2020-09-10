@@ -333,6 +333,46 @@ $bgc-sale: #ffeb3b;
     margin-left: -11px;
 }
 
+// Костыли, чтобы работал вызов иконки Font-Awesome из ::before и ::after 
+// (в бесплатной версии только font-weight: 900;)
+%font-awesome {
+    font-family: 'Font Awesome\ 5 Free', 'Font Awesome\ 5 Brands';
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-weight: 900;
+}
+
+
+//Псевдоселектор для слайдера в мобильной версии на странице product
+%mobile-slider-arrows {
+    content: url(../img/icons/arrow-left-pagination.svg);
+    cursor: pointer;
+    text-align: center;
+    line-height: 36px;
+    position: absolute;
+    // background-image: url(../img/icons/arrow-left-pagination.svg);
+    // background-repeat: no-repeat;
+    // background-position: center;
+    width: 36px;
+    height: 36px;
+    padding-top: 6px;
+    padding-right: 2px;
+    box-sizing: border-box;
+    background: rgba(240, 240, 240, 0.5);
+    // top: 30px;
+    top: 50%;
+    margin-top: -18px;
+    @include not-mobile {
+        display: none;
+    }
+}
+
+
 //Скрыть элемент
 .hidden {
     display: none;
