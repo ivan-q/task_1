@@ -20,7 +20,11 @@ section.slider-section
             p.product__offer $60 Apple Music gift card with purchase of select Beats products.*
             
         article.slider
-            img(src='../src/img/Bitmap-1.png' alt='slider')
+            .slider__img-wrap
+                img.slider__img.slider__img_1(src='../src/img/Bitmap-1.png' alt='slider')
+                img.slider__img.slider__img_2.hidden(src='../src/img/image(1).jpg' alt='slider')
+                img.slider__img.slider__img_3.hidden(src='../src/img/image(7).jpg' alt='slider')
             ul.pagination
-                -for(let i = 0; i < 3; i++)
-                    li.pag
+                li.pag
+                li.pag
+                li.pag

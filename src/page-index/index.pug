@@ -21,3 +21,43 @@ html(lang="en")
             include ../partials/signup/signup.pug
 
         include ../partials/footer/footer.pug
+
+        script.
+
+            let img1 = document.querySelector('.slider__img:nth-child(1)');
+            let img2 = document.querySelector('.slider__img:nth-child(2)');
+            let img3 = document.querySelector('.slider__img:nth-child(3)');
+
+            let pag1 = document.querySelector('.pag:nth-child(1)');
+            let pag2 = document.querySelector('.pag:nth-child(2)');
+            let pag3 = document.querySelector('.pag:nth-child(3)');
+
+            pag1.classList.add("pag_active");
+
+            let pagination = document.getElementsByClassName('pag');
+            pagination[0].onclick = function() {
+                img1.classList.remove("hidden");
+                img2.classList.add("hidden");
+                img3.classList.add("hidden");
+                pag1.classList.add("pag_active");
+                pag2.classList.remove("pag_active");
+                pag3.classList.remove("pag_active");
+            }
+
+            pagination[1].onclick = function() {
+                img2.classList.remove("hidden");
+                img1.classList.add("hidden");
+                img3.classList.add("hidden");
+                pag2.classList.add("pag_active");
+                pag1.classList.remove("pag_active");
+                pag3.classList.remove("pag_active");
+            }
+
+            pagination[2].onclick = function() {
+                img3.classList.remove("hidden");
+                img1.classList.add("hidden");
+                img2.classList.add("hidden");
+                pag3.classList.add("pag_active");
+                pag1.classList.remove("pag_active");
+                pag2.classList.remove("pag_active");
+            }

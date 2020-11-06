@@ -22,15 +22,6 @@ html(lang="en")
                         li.pag #{i}
 
         script.
-            // Применяем к товарам каталога стикеры New и Sale
-            const s = '.product-list__item:nth-child';
-            document.querySelector(`${s}(2)`).classList.add('new', 'sale');
-
-            document.querySelector(`${s}(3)`).classList.add('sale');
-            document.querySelector(`${s}(5)`).classList.add('sale');
-
-            document.querySelector(`${s}(4)`).classList.add('new');
-
             // Цвета для блока Color
             let squareColor = [
                 'yellow',
@@ -49,6 +40,15 @@ html(lang="en")
             for (let i = 0; i < 10; i++) {
                 colors[i].classList.add(squareColor[i]);
             }
+
+
+
+           
+
+
+
+
+
 
         //- Меню для фильтров на странице каталога (мобильная версия)
         //- const param = document.querySelector('.parameters-menu');

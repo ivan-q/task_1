@@ -39,11 +39,10 @@ let circleColor = [
     'circle_red',
     'circle_black',
 ]
-
 let circles = document.querySelectorAll('.circle');
 
-for (let i = 0, j = 0; i < 3; i++, j++) {
-    circles[i].classList.add(circleColor[j]);
+for (let i = 0; i < 3; i++) {
+    circles[i].classList.add(circleColor[i]);
 }
 
 
