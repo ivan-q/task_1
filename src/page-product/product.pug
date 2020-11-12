@@ -10,15 +10,58 @@ html(lang="en")
             include ../partials/nav/nav.pug
 
             section.slider-wrap.container
-                .product-page__slider
-                    div
-                        img(src="../src/img/product/small/image(1).jpg" alt="product image")
-                    div
-                        img(src="../src/img/product/small/image(2).jpg" alt="product image")
-                    div
-                        img(src="../src/img/product/small/image(3).jpg" alt="product image")        
+                .product-page__slider-wrap
+                    button.ar-up Button
+                    div.product-page__slider
+                        ul.track
+                            li.small
+                                img(src="../src/img/product/small/image(1).jpg" alt="product image")
+                            li.small
+                                img(src="../src/img/product/small/image(2).jpg" alt="product image")
+                            li.small
+                                img(src="../src/img/product/small/image(3).jpg" alt="product image")
+                            li.small
+                                img(src="../src/img/product/small/image(4).jpg" alt="product image")
+                            li.small
+                                img(src="../src/img/product/small/image(5).jpg" alt="product image")
+                            li.small
+                                img(src="../src/img/product/small/image(6).jpg" alt="product image")
+                            li.small
+                                img(src="../src/img/product/small/image(7).jpg" alt="product image")       
+                    button.ar-down Button
+                    
 
-                include ../partials/slider_section/slider_section.pug
+                section.slider-section
+                    .container
+                        article.product
+
+                            p.product__description Portable Wireless Speaker
+                            h2.product__title Beats Pill
+                                sup.plus-sign +
+
+                            .color-change
+                                h2.color-change__h2 Available Colors
+                                p.color-change__p Find your Color
+                                ul.color-change__circles
+                                    -for(let i = 0; i < 6; i++)
+                                        li.circle
+
+                            .product__wrap
+                                p.product__price $299.95
+                                a.product__button(href='#') Buy now
+
+                            p.product__offer $60 Apple Music gift card with purchase of select Beats products.*
+
+                        article.slider
+                            .slider__img-wrap
+                                img.slider__img(src='../src/img/product/large/image(1).jpg' alt='slider')
+                                img.slider__img.hidden(src='../src/img/product/large/image(2).jpg' alt='slider')
+                                img.slider__img.hidden(src='../src/img/product/large/image(3).jpg' alt='slider')
+                                img.slider__img.hidden(src='../src/img/product/large/image(4).jpg' alt='slider')
+                                img.slider__img.hidden(src='../src/img/product/large/image(5).jpg' alt='slider')
+                                img.slider__img.hidden(src='../src/img/product/large/image(6).jpg' alt='slider')
+                                img.slider__img.hidden(src='../src/img/product/large/image(7).jpg' alt='slider')
+
 
             section.recommended
                 .container
@@ -55,3 +98,22 @@ html(lang="en")
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
         include ../partials/footer/footer.pug
+
+        script.
+            let height = 168; // высота картинки
+            let count = 1; // видимое количество изображений
+            let list = document.querySelector('.track');
+            let listElems = document.querySelectorAll('li.small');
+            let position = 0; // положение ленты прокрут
+            
+            document.querySelector(".ar-up").onclick = function() {
+                position += height * count;
+                position = Math.min(position, 0);
+                list.style.marginTop = position + 'px';
+            }
+
+            document.querySelector(".ar-down").onclick = function() {
+                position -= height * count;
+                position = Math.max(position, -height * (listElems.length - count - 2));
+                list.style.marginTop = position + 'px';
+            }

@@ -33,14 +33,12 @@
     .slider {
         margin-right: -4%;
         float: right;
-        width: 52%;
+        // width: 52%;
         padding-top: 47px;
         padding-right: 54px;
         display: flex;
         flex-direction: column;
         align-items: center;
-
-        // overflow: hidden;//-----
 
         @include mobile {
             width: initial;
