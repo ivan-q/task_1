@@ -101,10 +101,10 @@ html(lang="en")
 
         script.
             let height = 168; // высота картинки
-            let count = 1; // видимое количество изображений
+            let count = 1; // шаг
             let list = document.querySelector('.track');
             let listElems = document.querySelectorAll('li.small');
-            let position = 0; // положение ленты прокрут
+            let position = 0; // положение ленты прокрутки
             
             document.querySelector(".ar-up").onclick = function() {
                 position += height * count;
@@ -117,3 +117,37 @@ html(lang="en")
                 position = Math.max(position, -height * (listElems.length - count - 2));
                 list.style.marginTop = position + 'px';
             }
+
+
+
+
+            let images = document.querySelectorAll(".slider__img");
+            let imgs = document.querySelector(".slider__img-wrap");
+            let arraySlides = [];
+            let length = listElems.length;
+            
+            for (let i = 0; i < length; i++) {
+                arraySlides.push(listElems[i]);
+                console.log(arraySlides);
+
+                listElems.onclick = function(event) { // не работает
+                    let index = arraySlides.indexOf(event.target);
+                    console.log(index);
+                }
+            }
+
+
+            //- for (let j = 0; j < listElems.length; j++) {
+            //-     listElems[j].onclick = function show() {
+            //-         imgs.style.display = "none";
+            //-         imgs.style.backgroundColor = "red";
+            //-     }
+            //- }
+
+
+
+
+
+
+
+        
