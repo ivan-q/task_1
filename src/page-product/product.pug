@@ -119,10 +119,8 @@ html(lang="en")
             }
 
 
-
-
-            let images = document.querySelectorAll(".slider__img");
-            let imgs = document.querySelector(".slider__img-wrap");
+            //- let images = document.querySelectorAll(".slider__img");
+            //- let imgs = document.querySelector(".slider__img-wrap");
             let arraySlides = [];
             let length = listElems.length;
             
@@ -130,7 +128,7 @@ html(lang="en")
                 arraySlides.push(listElems[i]);
                 console.log(arraySlides);
 
-                listElems.onclick = function(event) { // не работает
+                listElems[i].onclick = function(event) { // не работает
                     let index = arraySlides.indexOf(event.target);
                     console.log(index);
                 }
